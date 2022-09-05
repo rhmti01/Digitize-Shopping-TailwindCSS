@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body class=" bg-stone-100 ">
+<body class=" bg-stone-200/50 ">
     <!-- app bar section -->
-    <div class=" bg-slate-400/0 flex items-center justify-between mt-8 mx-3  ">
-        <div class=" "> <img src="/assets/icons/digitize.png" alt="digitize" > </div>
-        <div class=" text-lg font-bold text-slate-800 "> ساعت هوشمند </div>
-        <div class=" w-7 h-7 bg-white shadow-md flex items-center justify-center rounded-lg " >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+    <div class=" bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
+        <div> <img src="/assets/icons/digitize.png" alt="digitize"> </div>
+        <div class=" text-lg font-bold text-slate-700 drop-shadow-lg "> ساعت هوشمند </div>
+        <div class=" w-7 h-7 bg-white shadow-md flex items-center justify-center rounded-lg ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="w-5 h-5 stroke-slate-700 ">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -26,9 +26,102 @@
         </div>
     </div>
     <!-- sort and filter bar -->
-    <div class=" bg-slate-300 mx-3 flex items-center justify-around mt-2 " >
-
+    <div class=" mx-2 flex md:hidden  items-center justify-around mt-3 h-11  ">
+        <!-- sort -->
+        <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-md ">
+            <div class=" flex items-center justify-between ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
+                </svg>
+            </div>
+            <span class=" font-normal text-xs ">جدیدترین محصول</span>
+        </div>
+        <!-- filter -->
+        <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-md ">
+            <div class=" flex items-center justify-between ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+                </svg>
+            </div>
+            <span class=" font-normal text-xs px-2 ">فیلتر : برند اپل</span>
+        </div>
     </div>
+    <!-- product section -->
+    <div x-data="{
+        products : [
+        { id : 1 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 2 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 3 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 4 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 5 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 6 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 7 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 8 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 9 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 10 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  }
+        ]
+      }" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2 mt-3 gap-y-2 md:gap-1  ">
+        <!-- single product -->
+        <template x-for="product in products" :key="product.id">
+            <div class="div bg-stone-50 p-1.5 m-1  text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-md border border-gray-100 xl:p-2 ">
+                <div
+                    class="img w-full h-40 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
+                    <img class=" py-4 w-28 md:w-5/12 " src="/assets/images/a (2).png" alt="Apple Watch">
+                </div>
+                <div class=" flex items-center justify-between mt-3 px-1">
+                    <p class=" text-stone-400 md:text-sm  ">اپل</p>
+                    <div x-data="{ color: 'green' }" class="flex items-center">
+                        <div @click="color = 'red' " :class="color === 'red' ? 'ring-2 ring-red-600' : '' "
+                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-red-600 border-2 border-white">
+                            <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div @click="color = 'blue' " :class="color === 'blue' ? 'ring-2 ring-blue-500' : '' "
+                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-blue-500 border-2 border-white -mr-1.5">
+                            <svg x-show="color === 'blue' " xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div @click="color = 'yellow' " :class="color === 'yellow' ? 'ring-2 ring-yellow-400' : '' "
+                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-yellow-400 border-2 border-white -mr-1.5">
+                            <svg x-show="color === 'yellow' " xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div @click="color = 'green' " :class="color === 'green' ? 'ring-2 ring-black/50' : '' "
+                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-black/90 border-2 border-white -mr-1.5">
+                            <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <h1  x-text=" product.title "  class=" px-1 font-semibold mt-3 mb-1 text-xs md:text-sm text-gray-700  xl:text-base tracking-tight "></h1>
+                <h2 x-text=" product.price "  class="  px-2 my-2 text-xs font-normal text-orange-600 text-left md:text-sm  xl:text-base xl:font-medium "></h2>
+                <hr class=" w-11/12 mx-auto mt-2 bg-slate-500/5 ">
+                <button class=" font-bold text-md my-1.5  text-center text-orange-400  block  mx-auto md:text-md xl:text-lg  ">مشاهده و سفارش </button>
+            </div>
+        </template>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
