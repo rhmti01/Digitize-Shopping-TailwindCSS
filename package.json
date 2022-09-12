@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node  app.js ",
     "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch " ,
-    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  "
+    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  " 
   },
   "keywords": [],
   "author": "",
