@@ -1,0 +1,1 @@
+console.log(" hey, there this is result of start command of my nodejs project ");

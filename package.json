@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node  /src/js/app.js ",
+    "start": " node  ./src/js/server.js ",
     "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch " ,
     "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  " 
   },
