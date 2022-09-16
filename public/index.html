@@ -14,113 +14,392 @@
 
 <body class=" bg-stone-200/50 ">
     <!-- app bar section -->
-    <div class=" bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
-        <div> <img src="/assets/icons/digitize.png" alt="digitize"> </div>
-        <div class=" text-lg font-bold text-slate-700 drop-shadow-lg "> ساعت هوشمند </div>
-        <div class=" w-7 h-7 bg-white shadow-md flex items-center justify-center rounded-lg ">
+    <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
+        <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
+        <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl "> ساعت هوشمند </div>
+        <div class=" w-7 h-7 sm:h-9 sm:w-9 bg-white shadow-md flex items-center justify-center rounded-lg ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="w-5 h-5 stroke-slate-700 ">
+                stroke="currentColor" class="w-5 h-5 sm:w-7 sm:h-7 stroke-slate-700 ">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
             </svg>
         </div>
     </div>
+
     <!-- sort and filter bar -->
     <div class=" mx-2 flex md:hidden  items-center justify-around mt-3 h-11  ">
         <!-- sort -->
         <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-md ">
             <div class=" flex items-center justify-between ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
                 </svg>
             </div>
-            <span class=" font-normal text-xs ">جدیدترین محصول</span>
+            <span class=" font-normal text-sm sm:text-base ">جدیدترین محصول</span>
         </div>
         <!-- filter -->
         <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-md ">
             <div class=" flex items-center justify-between ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-4 h-4 stroke-red-500 ">
+                    stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                 </svg>
             </div>
-            <span class=" font-normal text-xs px-2 ">فیلتر : برند اپل</span>
+            <span class=" font-normal text-sm sm:text-base px-2 ">فیلتر : برند اپل</span>
         </div>
     </div>
-    <!-- product section -->
-    <div x-data="{
-        products : [
-        { id : 1 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 2 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 3 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 4 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 5 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 6 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 7 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 8 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 9 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
-        { id : 10 , title : ' ساعت هوشمند اپل سری ۷ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  }
-        ]
-      }" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2 mt-3 gap-y-2 md:gap-1  ">
-        <!-- single product -->
-        <template x-for="product in products" :key="product.id">
-            <div class="div bg-stone-50 p-1.5 m-1  text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-md border border-gray-100 xl:p-2 ">
-                <div
-                    class="img w-full h-40 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                    <img class=" py-4 w-28 md:w-5/12 " src="/assets/images/a (2).png" alt="Apple Watch">
+
+    <!-- main section -->
+    <div class="grid grid-cols-12  md:grid-rows-[55px_minmax(500px,_1fr)]  gap-4 md:p-3  ">
+
+        <!-- side bar -->
+        <div class="col-span-2 hidden md:block row-span-2 mr-2 ">
+            <div class=" border-gray-100 shadow-sm bg-white p-4 rounded-2xl ">
+
+                <!-- categories -->
+                <div class="mb-8">
+                    <div class=" text-orange-500 font-bold mb-5 text-lg mr-5 mt-4 ">دسته بندی</div>
+                    <ul>
+                        <li class=" flex items-center justify-start text-slate-800 py-3   ">
+                            <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-8 h-9 -bottom-2 -left-1 absolute ">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                </svg>
+                            </div>
+                            <span class="mr-6 cursor-pointer ">تلفن همراه</span>
+                        </li>
+                        <li class=" flex items-center justify-start text-slate-400 py-3   ">
+                            <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-9 h-8 absolute -bottom-1 -left-2 ">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                                </svg>
+                            </div>
+                            <span class="mr-6 cursor-pointer ">لپ تاپ</span>
+                        </li>
+                        <li class=" flex items-center justify-start text-slate-400 py-3   ">
+                            <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="mr-6 cursor-pointer ">ساعت هوشمند</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class=" flex items-center justify-between mt-3 px-1">
-                    <p class=" text-stone-400 md:text-sm  ">اپل</p>
-                    <div x-data="{ color: 'green' }" class="flex items-center">
-                        <div @click="color = 'red' " :class="color === 'red' ? 'ring-2 ring-red-600' : '' "
-                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-red-600 border-2 border-white">
-                            <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+
+                <!-- desktop filters -->
+                <div class=" mb-4 ">
+                    <div class=" text-orange-500 font-bold mb-5 text-lg mr-5 mt-4 ">فیلتر</div>
+                    <div class="my-3" x-data="{ tabTow : true }">
+                        <!-- header -->
+                        <div @click=" tabTow = !tabTow " class="  cursor-pointer flex items-center  justify-between w-11/12 ">
+                            <li class=" flex items-center justify-start text-slate-800 py-3 pl-12 ">
+                                <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor"
+                                        class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                    </svg>
+                                </div>
+                                <span class="mr-6 cursor-pointer ">برند محصول</span>
+                            </li>
+                            <svg :class=" tabTow ? ' rotate-180  transition-all  '  :  ' ' "
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
-                        <div @click="color = 'blue' " :class="color === 'blue' ? 'ring-2 ring-blue-500' : '' "
-                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-blue-500 border-2 border-white -mr-1.5">
-                            <svg x-show="color === 'blue' " xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                        <div @click="color = 'yellow' " :class="color === 'yellow' ? 'ring-2 ring-yellow-400' : '' "
-                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-yellow-400 border-2 border-white -mr-1.5">
-                            <svg x-show="color === 'yellow' " xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                        <div @click="color = 'green' " :class="color === 'green' ? 'ring-2 ring-black/50' : '' "
-                            class=" duration-500 w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full cursor-pointer bg-black/90 border-2 border-white -mr-1.5">
-                            <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                        <!-- content -->
+                        <div x-show="tabTow" class=" transition-all  text-justify  ">
+                            <div class="py-2">
+                                <label for="apple" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="apple">
+                                    <span class=" pr-8 ">اپل</span>
+                                </label>
+                                <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="xiaomi">
+                                    <span class=" pr-8 ">شیائومی</span>
+                                </label>
+                                <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="samsung">
+                                    <span class=" pr-8 ">سامسونگ</span>
+                                </label>
+                                <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="huawi">
+                                    <span class=" pr-8 ">هواوی</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <h1  x-text=" product.title "  class=" px-1 font-semibold mt-3 mb-1 text-xs md:text-sm text-gray-700  xl:text-base tracking-tight "></h1>
-                <h2 x-text=" product.price "  class="  px-2 my-2 text-xs font-normal text-orange-600 text-left md:text-sm  xl:text-base xl:font-medium "></h2>
-                <hr class=" w-11/12 mx-auto mt-2 bg-slate-500/5 ">
-                <button class=" font-bold text-md my-1.5  text-center text-orange-400  block  mx-auto md:text-md xl:text-lg  ">مشاهده و سفارش </button>
+
+                <!-- product color -->
+                <div class=" mb-3 ">
+                    <div class="my-3" x-data="{ tabTow : false }">
+                        <!-- header -->
+                        <div @click=" tabTow = !tabTow " class="  cursor-pointer flex items-center  justify-between w-11/12 ">
+                            <li class=" flex items-center justify-start text-slate-800 py-3 pl-12 ">
+                                <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor"
+                                        class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+                                    </svg>
+                                </div>
+                                <span class="mr-4 cursor-pointer ">رنگ محصول</span>
+                            </li>
+                            <svg :class=" tabTow ? ' rotate-180  transition-all   '  :  ' ' "
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <!-- content -->
+                        <div x-show="tabTow" class=" transition-all   ">
+                            <div class="py-2">
+                                <label for="red" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="red">
+                                    <span class=" pr-8 ">قرمز</span>
+                                </label>
+                                <label for="blue" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="blue">
+                                    <span class=" pr-8 ">آبی</span>
+                                </label>
+                                <label for="yellow" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="yellow">
+                                    <span class=" pr-8 " > زرد</span>
+                                </label>
+                                <label for="green" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="green">
+                                    <span class=" pr-8 ">سبز</span>
+                                </label>
+                                <label for="purple" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="purple">
+                                    <span class=" pr-8 ">بنفش</span>
+                                </label>
+                                <label for="pink" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="color" id="pink">
+                                    <span class=" pr-8 ">صورتی</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- price range -->
+                <div class=" mb-3 ">
+                    <div class="my-3" x-data="{ tabTow : false }">
+                        <!-- header -->
+                        <div @click=" tabTow = !tabTow " class="  cursor-pointer flex items-center justify-between w-11/12 ">
+                            <li class=" flex items-center justify-start text-slate-800 py-3 pl-12 ">
+                                <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 absolute -bottom-1 -left-1 " >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                                      </svg>                                                                         
+                                </div>
+                                <span class="mr-4 cursor-pointer ">محدوده قیمت</span>
+                            </li>
+                            <svg :class=" tabTow ? ' rotate-180  transition-all   '  :  ' ' "
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <!-- content -->
+                        <div x-show="tabTow" class=" transition-all   ">
+                            <div class="py-2">
+                                <label for="apple" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="apple">
+                                    <span class=" pr-8 ">اپل</span>
+                                </label>
+                                <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="xiaomi">
+                                    <span class=" pr-8 ">شیائومی</span>
+                                </label>
+                                <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="samsung">
+                                    <span class=" pr-8 ">سامسونگ</span>
+                                </label>
+                                <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
+                                    <input class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 " type="checkbox" name="brand" id="huawi">
+                                    <span class=" pr-8 ">هواوی</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </template>
+        </div>
+
+        <!-- sort section -->
+        <div class="col-span-10 hidden bg-white border-gray-100 shadow-md rounded-xl md:flex md:items-center xl:mx-3 ">
+            <div x-data="{ sort : 1 , activeClass : ' text-zinc-800 font-extrabold ' }"
+                class=" px-2 gap-x-4 pr-2 flex items-center ">
+                <img class=" w-9 h-9 mx-1 xl:mx-3 " src="/assets/images/Sort.png" alt="sort button">
+                <button @click="sort = 1" :class=" sort === 1   ?  activeClass :  '  '   "
+                    class=" py-2  md:text-xs lg:text-sm text-gray-400 2xl:text-base relative ">
+                    <span>محبوب ترین محصول</span>
+                    <span x-show=" sort === 1 "
+                        class=" w-1.5 h-1.5 bg-red-400 rounded-full absolute top-0 -left-2 "></span>
+                </button>
+                <button @click="sort = 2" :class=" sort === 2   ?  activeClass :  '  '   "
+                    class=" py-2  md:text-xs lg:text-sm text-gray-400 2xl:text-base relative ">
+                    <span>پرفروش ترین محصول</span>
+                    <span x-show=" sort === 2 "
+                        class=" w-1.5 h-1.5 bg-red-400 rounded-full absolute top-0 -left-2 "></span>
+                </button>
+                <button @click="sort = 3" :class=" sort === 3   ?  activeClass :  '  '   "
+                    class=" py-2  md:text-xs lg:text-sm text-gray-400 2xl:text-base relative ">
+                    <span>گران ترین محصول</span>
+                    <span x-show=" sort === 3 "
+                        class=" w-1.5 h-1.5 bg-red-400 rounded-full absolute top-0 -left-2 "></span>
+                </button>
+                <button @click="sort = 4" :class=" sort === 4   ?  activeClass :  '  '   "
+                    class=" py-2  md:text-xs lg:text-sm text-gray-400 2xl:text-base relative ">
+                    <span>ارزان ترین محصول</span>
+                    <span x-show=" sort === 4 "
+                        class=" w-1.5 h-1.5 bg-red-400 rounded-full absolute top-0 -left-2 "></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- products section -->
+        <div class="col-span-12 rounded-xl md:col-span-10 ">
+
+            <!-- product section -->
+            <div x-data="{
+        products : [
+        { id : 1 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 2 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 3 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 4 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 5 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 6 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 7 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 8 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 9 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 10 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 11 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 12 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 13 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 14 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 15 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 16 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 17 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 18 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 19 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 20 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 21 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 22 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 23 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 24 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 25 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 26 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 27 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 28 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 29 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  },
+        { id : 30 , title : ' ساعت هوشمند اپل سری ۸ ' , price : ' ۱۱,۵۰۰,۰۰ تومان '  }
+        ]
+      }" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-2 mt-3 gap-y-2 xl:gap-y-2 sm:gap-x-2 xl:gap-x-2 md:gap-1  ">
+                <!-- single product -->
+                <template x-for="product in products" :key="product.id">
+                    <div
+                        class="div bg-white p-1.5 m-1  text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-md hover:shadow-2xl duration-500 border border-gray-100 xl:p-2 ">
+                        <div
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
+                            <img class=" py-4 w-28 md:w-5/12 2xl:w-4.5/12 2 "
+                                src="/assets/images/apple-watch-removebg-preview.png" alt="Apple Watch">
+                        </div>
+                        <div class=" flex items-center justify-between mt-3 px-1">
+                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
+                            <div x-data="{ color: 'yellow' }" class="flex items-center">
+                                <div @click="color = 'red' " :class="color === 'red' ? 'ring-2 ring-red-600' : '' "
+                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-red-500 border-2 border-white">
+                                    <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'blue' " :class="color === 'blue' ? 'ring-2 ring-blue-500' : '' "
+                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-blue-500 border-2 border-white -mr-1.5">
+                                    <svg x-show="color === 'blue' " xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'green' " :class="color === 'green' ? 'ring-2 ring-gray-600' : '' "
+                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-gray-600 border-2 border-white -mr-1.5">
+                                    <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'multi' "
+                                    :class="color === 'multi' ? 'ring-yellow-400 ring-2' : '' "
+                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer border-2 bg-gradient-to-r from-sky-400 via-rose-400 to-yellow-400 border-white -mr-1.5  ">
+                                    <svg x-show="color === 'multi' " xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div @click="color = 'yellow' "
+                                    :class="color === 'yellow' ? 'ring-2 ring-orange-200' : '' "
+                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-orange-300/90 border-2 border-white -mr-1.5">
+                                    <svg x-show="color === 'yellow' " xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h1 x-text=" product.title "
+                            class=" px-1 font-semibold mt-3 mb-1  text-gray-700 text-base xl:text-lg xl:font-medium tracking-tight ">
+                        </h1>
+                        <h2 x-text=" product.price "
+                            class="  px-2 my-2  font-normal text-orange-500 text-left text-base xl:text-lg  xl:font-medium ">
+                        </h2>
+                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <button
+                            class=" font-bold text-base my-1.5  text-center text-orange-400  block  mx-auto  xl:text-lg xl:font-bold  ">مشاهده
+                            و سفارش </button>
+                    </div>
+                </template>
+            </div>
+        </div>
     </div>
+
+
     <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 

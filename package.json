@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": " node  ./src/js/server.js ",
-    "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch " ,
-    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  " 
+    "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch ",
+    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "tailwindcss": "^3.1.8"
   }
 }
