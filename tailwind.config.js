@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         'sans': ["iransansdn"],
       },
+      screens: {
+        '3xl': '1850px',
+      },
     },
   },
   plugins: [
