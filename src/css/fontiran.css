@@ -79,3 +79,42 @@ This set of fonts are used in this project under the license: (.....)
 		 url('../fonts/ttf/robotoregular.ttf') format('truetype');
 }
 
+
+
+/* constume scrollbar */
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #FDD6A9 ;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FB923C;
+    border-radius: 17px;
+    border: 2px solid #efefef;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+}
+
+div::-webkit-scrollbar {
+    width: 12px;
+}
+
+div::-webkit-scrollbar-track {
+    background: #FDD6A9 ;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #FB923C;
+    border-radius: 17px;
+    border: 2px solid #efefef;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+}
