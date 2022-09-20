@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body class=" bg-stone-200/50 ">
+<body class="  bg-stone-200/50 ">
     <!-- app bar section -->
     <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
         <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
-        <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl "> ساعت هوشمند </div>
-        <div class=" w-7 h-7 sm:h-9 sm:w-9 bg-white shadow-md flex items-center justify-center rounded-lg ">
+        <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">تلفن همراه</div>
+        <div class=" w-8 h-8 sm:h-10 sm:w-10 bg-white shadow-md flex items-center justify-center rounded-lg ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="w-5 h-5 sm:w-7 sm:h-7 stroke-slate-700 ">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,7 +30,7 @@
     <div class=" mx-2 flex md:hidden  items-center justify-around mt-3 h-11  ">
         <!-- sort -->
         <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-md ">
-            <div class=" flex items-center justify-between ">
+            <div class=" hidden sx:flex items-center justify-between  ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -46,7 +46,7 @@
         </div>
         <!-- filter -->
         <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-md ">
-            <div class=" flex items-center justify-between ">
+            <div class=" hidden sx:flex items-center justify-between ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -58,36 +58,38 @@
     </div>
 
     <!-- navbar  -->
-    <nav class=" hidden sticky top-0 z-10 md:flex items-center justify-between md:p-4 mb-2 bg-white shadow-md ">
-        <ul class="  flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-xl 2xl:max-w-2xl ">
-            <li>
-                <a href="#"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
-            </li>
-            <li
-                class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
-                <a href="#">خانه</a></li>
-            <li
-                class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
-                <a href="#">تلفن همراه</a></li>
-            <li
-                class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
-                <a href="#">لپ تاپ</a></li>
-            <li
-                class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
-                <a href="#">ساعت هوشمند</a></li>
-        </ul>
-        <div class=" bg-gray-200 md:basis-5/12 lg:basis-6/12 flex items-center px-2 py-3 rounded-md  xl:max-w-lg ">
-            <svg width="28" height="28" class=" mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
-                    stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-            <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text"
-                class=" bg-transparent border-1 border-white mr-2 outline-none w-9/12 md:text-sm xl:text-base font-thin text-gray-900 ">
+    <nav class=" hidden sticky top-0 z-10 md:flex items-center justify-between md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 bg-white rounded-lg shadow-md ">
+        <div class=" container mx-auto max-w-screen-4xl  flex items-center justify-between " >
+            <ul class="  flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-xl 2xl:max-w-2xl ">
+                <li>
+                    <a href="#"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
+                </li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
+                    <a href="#">خانه</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
+                    <a href="#">تلفن همراه</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
+                    <a href="#">لپ تاپ</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-extrabold md:text-base xl:text-lg ">
+                    <a href="#">ساعت هوشمند</a></li>
+            </ul>
+            <div class=" bg-gray-200 md:basis-5/12 lg:basis-6/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-lg  lg:max-w-md xl:max-w-lg ">
+                <svg width="28" height="28" class=" mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
+                        stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text"
+                    class=" bg-transparent border-1 border-white mr-2 outline-none w-9/12 md:text-xs xl:text-sm font-thin text-gray-900 ">
+            </div>
         </div>
     </nav>
 
     <!-- main section -->
-    <div class="grid grid-cols-12  md:grid-rows-[55px_minmax(500px,_1fr)]  gap-4 md:p-3 lg:pt-4 ">
+    <div class=" 4xl:container  grid grid-cols-12  md:grid-rows-[55px_minmax(500px,_1fr)]  gap-4 md:p-3 lg:pt-4 ">
 
         <!-- side bar -->
         <div
@@ -323,7 +325,7 @@
         <!-- sort section -->
         <div
             class="col-span-8 lg:col-span-9 2xl:col-span-9 3xl:col-span-10 hidden bg-white border-gray-100 shadow-md rounded-xl md:flex md:items-center xl:mx-3 ">
-            <div x-data="{sort : 1, activeClass: ' text-black/90  '}"
+            <div x-data="{sort : 1, activeClass: ' font-semibold text-gray-800/90 '}"
                 class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg">
                 <div class="bg-red-100/80 p-1.5 space-x-2 rounded-md flex justify-center items-center cursor-pointer ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-7 lg:w-7 md:w-6 md:h-6 stroke-orange-400"
@@ -366,42 +368,42 @@
             <!-- product section -->
             <div x-data="{
         products : [
-        { id : 1 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 2 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 3 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 4 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 5 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 6 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 7 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 8 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 9 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 10 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 11 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 12 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 13 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 14 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 15 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 16 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 17 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 18 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 19 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 20 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 21 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 22 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 23 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 24 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 25 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 26 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 27 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 28 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 29 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  },
-        { id : 30 , title : ' آیفون ۱۴ پرومکس  ۵۱۲ گیگابایت' , price : ' ۷۳,۶۰۰,۰۰ تومان '  }
+        { id : 1 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 2 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 3 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 4 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 5 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 6 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 7 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 8 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 9 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 10 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 11 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 12 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 13 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 14 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 15 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 16 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 17 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 18 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 19 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 20 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 21 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 22 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 23 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 24 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 25 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 26 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 27 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 28 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 29 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  },
+        { id : 30 , title : ' آیفون ۱۴ پرومکس  ۲۵۶ گیگابایت' , price : ' ۶۴,۵۰۰,۰۰ تومان '  }
         ]
       }" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 mx-1 mt-3 gap-y-2 xl:gap-y-2 sm:gap-x-2 xl:gap-x-2 md:gap-1  ">
                 <!-- single product -->
                 <template x-for="product in products" :key="product.id">
                     <div
-                        class="div bg-white p-1.5 m-1  text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-md hover:shadow-2xl duration-500 border border-gray-100 xl:p-2 ">
+                        class="div bg-white p-1.5 m-1  text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-md  duration-500 border border-gray-100 xl:p-2 ">
                         <div
                             class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
                             <img class=" py-4 w-16 md:w-3/12  xl:w-4/12  " src="/assets/images/Apple-iPhone-14-Pro.png"
@@ -411,40 +413,40 @@
                             <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
                             <div x-data="{ color: 'yellow' }" class="flex items-center">
                                 <div @click="color = 'red' " :class="color === 'red' ? 'ring-2 ring-fuchsia-900' : '' "
-                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-gradient-to-l from-gray-900 via-zinc-800 to-purple-900 border-2 border-white">
+                                    class=" duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 hover:w-11 flex items-center justify-center rounded-xl cursor-pointer bg-gradient-to-l from-gray-900 via-zinc-800 to-purple-900 border-2 border-white">
                                     <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg"
                                         class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
                                 <div @click="color = 'green' " :class="color === 'green' ? 'ring-2 ring-gray-600' : '' "
-                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer bg-gray-600 border-2 border-white -mr-1.5">
+                                    class=" duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 hover:w-11 flex items-center justify-center rounded-xl cursor-pointer bg-gray-600 border-2 border-white -mr-1.5">
                                     <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg"
                                         class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
                                 <div @click="color = 'multi' "
                                     :class="color === 'multi' ? 'ring-stone-400 ring-2' : '' "
-                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer border-2 bg-stone-300 border-white -mr-1.5  ">
+                                    class=" duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 hover:w-11 flex items-center justify-center rounded-xl cursor-pointer border-2 bg-stone-300 border-white -mr-1.5  ">
                                     <svg x-show="color === 'multi' " xmlns="http://www.w3.org/2000/svg"
                                         class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
                                 <div @click="color = 'yellow' "
                                     :class="color === 'yellow' ? 'ring-2 ring-amber-300' : '' "
-                                    class=" duration-300 w-5 h-5 sm:w-7 sm:h-7 hover:w-11 flex items-center justify-center rounded-xl md:rounded-xl cursor-pointer border-2 border-white -mr-1.5  bg-gradient-to-r from-orange-300 to-amber-300 ">
+                                    class=" duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 hover:w-11 flex items-center justify-center rounded-xl cursor-pointer border-2 border-white -mr-1.5  bg-gradient-to-r from-orange-300 to-amber-300 ">
                                     <svg x-show="color === 'yellow' " xmlns="http://www.w3.org/2000/svg"
                                         class="h-4 w-4 sm:w-5 sm:h-5 stroke-white" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                             d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>

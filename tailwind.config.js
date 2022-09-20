@@ -6,8 +6,13 @@ module.exports = {
       fontFamily: {
         'sans': ["iransansdn"],
       },
+      container: {
+        center: true,
+      },
       screens: {
+        'sx': ' 333px ',
         '3xl': '1850px',
+        '4xl': '1921px',
       },
     },
   },
