@@ -85,10 +85,12 @@ This set of fonts are used in this project under the license: (.....)
 
 body::-webkit-scrollbar {
     width: 15px;
+	cursor: pointer;
 }
 
 body::-webkit-scrollbar-track {
     background: #FDD6A9 ;
+	cursor: pointer;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -99,14 +101,17 @@ body::-webkit-scrollbar-thumb {
     -moz-border-radius: 17px;
     -ms-border-radius: 17px;
     -o-border-radius: 17px;
+	cursor: pointer;
 }
 
 div::-webkit-scrollbar {
     width: 12px;
+	cursor: pointer;
 }
 
 div::-webkit-scrollbar-track {
     background: #FDD6A9 ;
+	cursor: pointer;
 }
 
 div::-webkit-scrollbar-thumb {
@@ -117,4 +122,5 @@ div::-webkit-scrollbar-thumb {
     -moz-border-radius: 17px;
     -ms-border-radius: 17px;
     -o-border-radius: 17px;
+	cursor: pointer;
 }
