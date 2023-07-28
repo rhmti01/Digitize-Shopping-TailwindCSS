@@ -1,90 +1,92 @@
 ﻿/**
 *
-*	Name:			IRANSansDN Font
-*	Version:		1.0
-*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
-*	Created on:		Dec 20, 2017
-*	Updated on:		Dec 20, 2017
-*	Website:		http://fontiran.com
+*	Name:			Yekan Bakh Fonts
+*	Version:			2.0
+*	Author:			Reza Bakhtiarifard (rbakhtiarifard.ir)
+*	Created on:		Apr 2022
+*	Updated on:		Apr 2022
+*	Vendor:			http://fontiran.com
 *	Copyright:		Commercial/Proprietary Software
 --------------------------------------------------------------------------------------
-فونت ایران سنس دست نویس یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+فونت پیکان یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
 --------------------------------------------------------------------------------------
-IRANSansDN fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+yekan bakh fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
 --------------------------------------------------------------------------------------
 This set of fonts are used in this project under the license: (.....)
---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------- fonts/-
 *	
 **/
+
+
 @font-face {
-	font-family: iransansdn;
+	font-family: yekanbakh;
 	font-style: normal;
-	font-weight: bold;
-	src: url('../fonts/eot/iransansdnwebbold.eot');
-	src: url('../fonts/eot/iransansdnwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/woff2/iransansdnwebbold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../fonts/woff/iransansdnwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/ttf/iransansdnwebbold.ttf') format('truetype');
+	font-weight: 100;
+	src: url('fonts/woff/yekanbakh-thin.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-thin.woff2') format('woff2');		
 }
 
 @font-face {
-	font-family: iransansdn;
-	font-style: normal;
-	font-weight: 300;
-	src: url('../fonts/eot/iransansdnweblight.eot');
-	src: url('../fonts/eot/iransansdnweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/woff2/iransansdnweblight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../fonts/woff/iransansdnweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/ttf/iransansdnweblight.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: iransansdn;
-	font-style: normal;
-	font-weight: normal;
-	src: url('../fonts/eot/iransansdnweb.eot');
-	src: url('../fonts/eot/iransansdnweb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/woff2/iransansdnweb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../fonts/woff/iransansdnweb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../fonts/ttf/iransansdnweb.ttf') format('truetype');
-}
-
-
-/* Latin fonts (Roboto) */
-
-@font-face {
-	font-family: roboto;
-	font-style: normal;
-	font-weight: bold;
-	src: url('../fonts/eot/robotobold.eot');
-	src: url('../fonts/eot/robotobold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/ttf/robotobold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: roboto;
+	font-family: yekanbakh;
 	font-style: normal;
 	font-weight: 300;
-	src: url('../fonts/eot/robotolight.eot');
-	src: url('../fonts/eot/robotolight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/ttf/robotolight.ttf') format('truetype');
+	src: url('fonts/woff/yekanbakh-Light.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-Light.woff2') format('woff2');	
 }
 
 @font-face {
-	font-family: roboto;
+	font-family: yekanbakh;
 	font-style: normal;
 	font-weight: normal;
-	src: url('../fonts/eot/robotoregular.eot');
-	src: url('../fonts/eot/robotoregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/ttf/robotoregular.ttf') format('truetype');
+	src: url('fonts/woff/yekanbakh-Regular.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-Regular.woff2') format('woff2');		 
 }
 
+@font-face {
+	font-family: yekanbakh;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/woff/yekanbakh-SemiBold.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-SemiBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: yekanbakh;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/woff/yekanbakh-Bold.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-Bold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: yekanbakh;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/woff/yekanbakh-ExtraBold.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-ExtraBold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: yekanbakh;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/woff/yekanbakh-Black.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-Black.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: yekanbakh;
+	font-style: normal;
+	font-weight: 950;
+	src: url('fonts/woff/yekanbakh-ExtraBlack.woff') format('woff'),   
+	url('fonts/woff2/yekanbakh-ExtraBlack.woff2') format('woff2');		 
+}
 
 
 /* constume scrollbar */
 
 body::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 	cursor: pointer;
 }
 
@@ -94,14 +96,13 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #FB923C;
-    border-radius: 17px;
-    border: 2px solid #efefef;
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    -ms-border-radius: 17px;
-    -o-border-radius: 17px;
+	background-color: #FB923C;
+	border-radius: 10px;
 	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 div::-webkit-scrollbar {
@@ -124,3 +125,5 @@ div::-webkit-scrollbar-thumb {
     -o-border-radius: 17px;
 	cursor: pointer;
 }
+
+

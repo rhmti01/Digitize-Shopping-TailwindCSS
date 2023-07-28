@@ -4,4 +4,61 @@
 @tailwind utilities;
 
 
+@layer base {
 
+        :root {
+          --warmGray: #595F58;
+          --lightGray:#f3e6da;
+          --lightGreen:#86A097;
+          --coolGray:#d1d5db;
+          --darkRed:#75535B;
+          --trueGray:#414143;
+        }
+      
+
+    .gb {
+        background: rgba(255, 255, 255, 0.608);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #ea4b42;
+    }
+
+    .sp:hover {
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
+    }
+
+    .ls:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+}
+
+    .bs{
+        background: linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219));
+    }
+
+    .bb{
+        background: linear-gradient(to right, rgb(58, 65, 78), rgb(75, 85, 99));
+    }
+
+    .bp{
+        background: linear-gradient(to right, rgb(130, 106, 148), rgb(141, 142, 210));
+    }
+
+    .uu{
+        word-spacing:20px;
+    }
+
+    .wp{
+        word-spacing:10px;
+    }
+
+}
