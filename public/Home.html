@@ -17,12 +17,14 @@
     <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
         <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
         <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">تلفن همراه</div>
-        <div class=" w-8 h-8 sm:h-10 sm:w-10 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="w-5 h-5 sm:w-7 sm:h-7 stroke-slate-700 ">
+        <div class=" w-9 h-9 sm:h-11 sm:w-11 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
+            <a href="shoppingCart.html" class=" outline-none decoration-transparent " >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
             </svg>
+            </a>
         </div>
     </div>
 
@@ -59,12 +61,13 @@
 
     <!-- bottom navigations -->
     <div
-        class=" gb z-50 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
+        class=" bg-white z-50 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
         <ul x-data="{activeBottomTab : 1 , activeBottomClass : ' text-slate-800  ' }"
             class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
             <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
                 class="  flex items-center justify-center ">
-                <a class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                <a href="Home.html" class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 "
+                    href="#">
                     <div><svg class="  " width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M26.72 9.094 19.04 3.72c-2.093-1.466-5.307-1.386-7.32.174L5.04 9.107c-1.333 1.04-2.387 3.173-2.387 4.853v9.2c0 3.4 2.76 6.174 6.16 6.174h14.374c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.014-2.627-5.04ZM17 24c0 .547-.453 1-1 1-.547 0-1-.453-1-1v-4c0-.546.453-1 1-1 .547 0 1 .454 1 1v4Z" />
@@ -88,7 +91,8 @@
                 </a></li>
             <li @click="activeBottomTab = 3 " :class="activeBottomTab === 3  ?  activeBottomClass :  '  '   "
                 class="  flex items-center justify-center ">
-                <a class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                <a href="shoppingCart.html"
+                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
                     <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z" />
@@ -100,13 +104,16 @@
             <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
                 class="  flex items-center justify-center ">
                 <a class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
-                    <div><svg class="  " width="29" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <div>
+                        <svg class="  " width="22" height="24"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M20.834.333a7.702 7.702 0 0 0-6.156 3.09A7.701 7.701 0 0 0 8.522.332C4.278.333.833 3.8.833 8.067c0 1.644.267 3.178.712 4.578 2.177 6.91 8.933 11.066 12.266 12.2.467.155 1.245.155 1.711 0 3.334-1.134 10.09-5.267 12.267-12.2.467-1.423.711-2.934.711-4.578C28.522 3.8 25.078.333 20.834.333Z" />
+                                d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
+                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle r="5" transform="matrix(-1 0 0 1 11 6)"  stroke-width="2" />
                         </svg>
                     </div>
                     <span x-show="activeBottomTab === 4 " class=" font-semibold sx:text-base ss:text-lg "
-                        x-transition.duration.800ms>علاقه مندی ها</span>
+                        x-transition.duration.800ms>ورود</span>
                 </a></li>
         </ul>
     </div>
@@ -117,11 +124,11 @@
         <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
             <ul class="  flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
                 <li>
-                    <a href="#"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
+                    <a href="Home.html"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
                 </li>
                 <li
                     class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[17px] xl:text-[20px] ">
-                    <a href="#">خانه</a></li>
+                    <a href="Home.html">خانه</a></li>
                 <li
                     class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-2 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[17px] xl:text-[20px] ">
                     <a href="#">تلفن همراه</a></li>
@@ -149,8 +156,10 @@
         class="  mx-auto max-w-screen-2xl grid grid-cols-12  gap-y-3 gap-x-3 md:p-3 xl:gap-x-16 lg:pt-2 mb-7 md:pb-9  ">
 
         <!-- side bar -->
-        <div class="  md:col-span-3 lg:col-span-3 xl:col-span-2 2xl:col-span-2  hidden md:block row-span-2 mr-1 xl:ml-6  ">
-            <div class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
+        <div
+            class="  md:col-span-3 lg:col-span-3 xl:col-span-2 2xl:col-span-2  hidden md:block row-span-2 mr-1 xl:ml-6  ">
+            <div
+                class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
 
                 <!-- categories -->
                 <div class="mb-8">
@@ -198,7 +207,7 @@
                 <div class=" text-orange-500 font-bold mb-5 md:text-lg mr-5 mt-4 ">فیلتر</div>
                 <!-- desktop filters -->
                 <div class=" mb-1 ">
-                    <div :class=" dektopTab ? ' bg-gradient-to-l from-white to-orange-100  transition-all '  :  ' ' "
+                    <div :class=" dektopTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
                         class="  my-3 hover:shadow-md  py-1 rounded-xl transition-all duration-500 "
                         x-data="{ dektopTab : false }">
                         <!-- header -->
@@ -213,12 +222,14 @@
                                             d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
                                     </svg>
                                 </div>
-                                <span class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-normal  ">برند
+                                <span
+                                    class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-normal  ">برند
                                     محصول</span>
                             </li>
                             <svg :class=" dektopTab ? ' rotate-180 transition-all '  :  ' ' "
-                                xmlns="http://www.w3.org/2000/svg" class="  stroke-black hidden lg:block md:h-4 md:w-4  xl:h-5 xl:w-5"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="  stroke-black hidden lg:block md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
@@ -257,7 +268,7 @@
 
                 <!-- product color -->
                 <div class=" mb-1  ">
-                    <div :class=" colorTab ? ' bg-gradient-to-l from-white to-orange-100  transition-all '  :  ' ' "
+                    <div :class=" colorTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
                         class="  my-3 hover:shadow-md   rounded-xl transition-all duration-500 "
                         x-data="{ colorTab : false }">
                         <!-- header -->
@@ -276,8 +287,9 @@
                                     محصول</span>
                             </li>
                             <svg :class=" colorTab ? ' rotate-180 transition-all '  :  ' ' "
-                                xmlns="http://www.w3.org/2000/svg" class=" hidden  lg:block md:h-4 md:w-4  xl:h-5 xl:w-5"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                xmlns="http://www.w3.org/2000/svg"
+                                class=" hidden  lg:block md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
@@ -328,7 +340,7 @@
 
                 <!-- price range -->
                 <div class=" mb-1 ">
-                    <div :class=" priceTab ? ' bg-gradient-to-l from-white to-orange-100  transition-all '  :  ' ' "
+                    <div :class=" priceTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
                         class="my-3 hover:shadow-md py-1 rounded-xl transition-all duration-500 "
                         x-data="{ priceTab : false }">
                         <!-- header -->
@@ -358,9 +370,9 @@
                             <div class=" p-4 ">
                                 <div class=" flex items-center justify-between mt-6 ">
                                     <label for="medium-range"
-                                        class="block mb-2 text-sm font-semibold text-red-400 ">۷۶,۰۰۰,۰۰۰ تومان</label>
+                                        class="block mb-2 text-sm font-semibold text-red-400 ">۷۶,۰۰۰,۰۰۰ </label>
                                     <label for="medium-range"
-                                        class="block mb-2 text-sm font-semibold text-red-400 ">۱۲,۰۰۰,۰۰۰ تومان</label>
+                                        class="block mb-2 text-sm font-semibold text-red-400 ">۱۲,۰۰۰,۰۰۰ </label>
                                 </div>
                                 <input id="medium-range" type="range" value="50"
                                     class=" mt-7 
@@ -432,7 +444,7 @@
                     class="div relative bg-white p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
                     <div
                         class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <!-- product like button-->
+                        <!-- product like button-->
                         <div class=" hidden sm:block absolute  right-3   top-3 rounded-xl  bg-rose-100   ">
                             <svg class="   w-9 h-9 right-0 top-0 p-2 " viewBox="0 0 24 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -465,11 +477,11 @@
                         ۱۴ پرومکس ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-[400] text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2  text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۵۸٫۵۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -512,11 +524,11 @@
                         s23 اولترا یک ترابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۶۲٫۲۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -553,11 +565,11 @@
                         ۱۳ پرو ۱۲۸ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۵٫۶۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -600,11 +612,11 @@
                         p60 پرو ۱۲۸ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۲۸٫۵۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -641,11 +653,11 @@
                         F5 پرو ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۸٫۷۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -687,11 +699,11 @@
                         ۱۴ پلاس ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۵۷٫۶۱۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -736,11 +748,11 @@
                         ۱۲۸ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۱۸٫۵۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -783,11 +795,11 @@
                         زد فولد ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۴۴,۳۰۰,۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -824,11 +836,11 @@
                         11i نوا ۱۲۸ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۲۳٫۸۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -871,11 +883,11 @@
                         زد فلیپ ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۶۲٫۴۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -918,11 +930,11 @@
                         ۱۳ مینی ۱۲۸ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۷٫۸۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -964,11 +976,11 @@
                         شیائومی k50 پرو ۲۵۶ گیگابایت
                     </h1>
                     <h2
-                        class="  px-2 my-2  font-light text-orange-500/90 text-left text-base xl:text-lg  xl:font-medium ">
+                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۴۲٫۳۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
-                    <a href="singleProduct.html" 
+                    <a href="singleProduct.html"
                         class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                         و سفارش </a>
                 </div>
@@ -1121,5 +1133,3 @@
 </body>
 
 </html>
-
-
