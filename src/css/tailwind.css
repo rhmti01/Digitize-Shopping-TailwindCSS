@@ -61,4 +61,8 @@
         word-spacing:10px;
     }
 
+    .inputltr{
+        direction: ltr;
+    }
+
 }
