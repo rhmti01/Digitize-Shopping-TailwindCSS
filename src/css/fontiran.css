@@ -86,17 +86,17 @@ This set of fonts are used in this project under the license: (.....)
 /* constume scrollbar */
 
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 	cursor: pointer;
 }
 
 body::-webkit-scrollbar-track {
-    background: #FDD6A9 ;
+    background: #a6a5a9ab ;
 	cursor: pointer;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #FB923C;
+	background-color: #514e4c;
 	border-radius: 10px;
 	cursor: pointer;
 	-webkit-border-radius: 10px;
@@ -106,24 +106,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 div::-webkit-scrollbar {
-    width: 12px;
+	height: 3px;
 	cursor: pointer;
 }
 
 div::-webkit-scrollbar-track {
-    background: #FDD6A9 ;
+    background: #ffffff00 ;
 	cursor: pointer;
 }
 
 div::-webkit-scrollbar-thumb {
-    background-color: #FB923C;
-    border-radius: 17px;
-    border: 2px solid #efefef;
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    -ms-border-radius: 17px;
-    -o-border-radius: 17px;
-	cursor: pointer;
+    background-color: #A59C94;
+    border-radius: 11px;
+    border: 2px solid #efefef00;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+    cursor: pointer;
 }
 
 

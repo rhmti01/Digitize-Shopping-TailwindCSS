@@ -3,10 +3,6 @@ module.exports = {
   content: ["./public/**/*.html"],
   theme: {
     extend: {
-      screens: {
-        'it':'300px',
-       'shit':'363px',
-      },
       fontFamily: {
         'sans': ["yekanbakh"],
       },

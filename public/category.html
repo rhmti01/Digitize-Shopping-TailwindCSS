@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
+    <title> Digitize Project | Abolfazl Rahmati </title>
+    <link rel="stylesheet" href="/public/build/style.css">
+</head>
+
+<body class=" overflow-auto bg-stone-200/50  ">
+    <!-- app bar section -->
+    <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
+        <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
+        <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">دسته‌بندی</div>
+        <div class=" w-9 h-9 sm:h-11 sm:w-11 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
+            <a href="shoppingCart.html" class=" outline-none decoration-transparent ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- bottom navigations -->
+    <div
+        class=" bg-white z-50 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
+        <ul x-data="{activeBottomTab : 2 , activeBottomClass : ' text-slate-800  ' }"
+            class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
+            <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
+                class="  flex items-center justify-center ">
+                <a href="Home.html" class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 "
+                    href="#">
+                    <div><svg class="  " width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.72 9.094 19.04 3.72c-2.093-1.466-5.307-1.386-7.32.174L5.04 9.107c-1.333 1.04-2.387 3.173-2.387 4.853v9.2c0 3.4 2.76 6.174 6.16 6.174h14.374c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.014-2.627-5.04ZM17 24c0 .547-.453 1-1 1-.547 0-1-.453-1-1v-4c0-.546.453-1 1-1 .547 0 1 .454 1 1v4Z" />
+                        </svg>
+                    </div>
+                    <span x-show="activeBottomTab === 1 " class=" font-semibold sx:text-base ss:text-lg "
+                        x-transition.duration.800ms>خانه</span>
+                </a></li>
+            <li @click="activeBottomTab = 2 " :class="activeBottomTab === 2 ?  activeBottomClass :  '  '   "
+                class="  flex items-center justify-center ">
+                <a class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                    <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    d="M10.257 2.833H7.565c-3.102 0-4.732 1.63-4.732 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.692c3.088 0 4.717-1.629 4.717-4.717V7.55c.014-3.088-1.615-4.718-4.703-4.718ZM26.45 2.833h-2.692c-3.089 0-4.718 1.63-4.718 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.691c3.088 0 4.718-1.629 4.718-4.717V7.55c0-3.088-1.63-4.718-4.718-4.718ZM26.45 19.026h-2.692c-3.089 0-4.718 1.629-4.718 4.717v2.692c0 3.088 1.63 4.718 4.718 4.718h2.691c3.088 0 4.718-1.63 4.718-4.718v-2.692c0-3.088-1.63-4.717-4.718-4.717ZM10.257 19.026H7.565c-3.102 0-4.732 1.629-4.732 4.717v2.692c0 3.103 1.63 4.732 4.718 4.732h2.692c3.088 0 4.717-1.63 4.717-4.718v-2.692c.014-3.102-1.615-4.731-4.703-4.731Z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <span x-show="activeBottomTab === 2 " class=" font-semibold sx:text-base ss:text-lg "
+                        x-transition.duration.800ms>دسته بندی</span>
+                </a></li>
+            <li @click="activeBottomTab = 3 " :class="activeBottomTab === 3  ?  activeBottomClass :  '  '   "
+                class="  flex items-center justify-center ">
+                <a href="shoppingCart.html"
+                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                    <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z" />
+                        </svg>
+                    </div>
+                    <span x-show="activeBottomTab === 3 " class=" font-semibold sx:text-base ss:text-lg "
+                        x-transition.duration.800ms>سبد خرید</span>
+                </a></li>
+            <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
+                class="  flex items-center justify-center ">
+                <a href="login.html"
+                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                    <div>
+                        <svg class="  " width="22" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <span x-show="activeBottomTab === 4 " class=" font-semibold sx:text-base ss:text-lg "
+                        x-transition.duration.800ms>ورود</span>
+                </a></li>
+        </ul>
+    </div>
+
+    <!-- navbar  -->
+    <nav
+        class=" z-50 nb bg-white hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-lg shadow-md ">
+        <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
+            <ul class="  flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
+                <li>
+                    <a href="Home.html"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
+                </li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    <a href="Home.html">خانه</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    <a href="#">تلفن همراه</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    <a href="#">لپ تاپ</a></li>
+                <li
+                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    <a href="#">ساعت هوشمند</a></li>
+            </ul>
+            <div
+                class=" bg-gray-200/80 md:basis-4/12 lg:basis-4/12 xl:basis-4/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
+                <svg width="28" height="28" class="  mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
+                        stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text"
+                    class=" placeholder-slate-900 bg-transparent border-1 border-white mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
+            </div>
+        </div>
+    </nav>
+
+    <!-- main section -->
+    <div class=" w-full mt-9 mb-28 md:pb-9  ">
+        <div class=" md:mr-10 lg:mr-18 xl:mr-24 mx-4 bg-red-500/   ">
+            <!-- phone section -->
+            <div class=" flex justify-start items-end flex-row w-full bg-indigo-600/  ">
+                <!-- banner -->
+                <img class=" rounded-xl h-48 w-36 md:w-40 md:h-52 " src="/assets/images/phone.png" alt="Phone image">
+                <!-- companies -->
+                <div class=" overflow-x-auto flex relative justify-start  mr-2 gap-x-0.5 pt-9 md:pt-11 bg-blue-600/ ">
+                    <!-- Apple -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/apple.png" alt="">
+                    <!-- Xiaomi -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/xiaomi.png" alt="">
+                    <!-- asus -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/asus.png" alt="">
+                    <!-- link to home -->
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="Home.html">مشاهده همه</a>
+                </div>
+            </div>
+            <!-- laptop section -->
+            <div class=" flex justify-start items-end flex-row w-full bg-indigo-600/ mt-4 ">
+                <!-- banner -->
+                <img class=" rounded-xl h-48 w-36 md:w-40 md:h-52 " src="/assets/images/laptop.png" alt="Phone image">
+                <!-- companies -->
+                <div class=" overflow-x-auto flex relative justify-start  mr-2 gap-x-0.5 pt-9 md:pt-11 bg-blue-600/ ">
+                    <!-- asus -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/asus.png" alt="">
+                    <!-- apple -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/apple.png" alt="">
+                    <!-- Xiaomi -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/xiaomi.png" alt="">
+                    <!-- link to home -->
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="Home.html">مشاهده همه</a>
+                </div>
+            </div>
+            <!-- smart watch section -->
+            <div class=" flex justify-start items-end flex-row w-full bg-indigo-600/ mt-4 ">
+                <!-- banner -->
+                <img class=" rounded-xl h-48 w-36 md:w-40 md:h-52 " src="/assets/images/smartWatch.png" alt="Phone image">
+                <!-- companies -->
+                <div class=" overflow-x-auto flex relative justify-start  mr-2 gap-x-0.5 pt-9 md:pt-11 bg-blue-600/ ">
+                    <!-- apple -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/apple.png" alt="">
+                    <!-- xiaomi -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/xiaomi.png" alt="">
+                    <!-- asus -->
+                    <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/asus.png" alt="">
+                    <!-- link to home -->
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="Home.html">مشاهده همه</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
