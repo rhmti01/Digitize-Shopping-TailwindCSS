@@ -12,18 +12,19 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body class="  bg-stone-200/50  ">
+<body  x-data="{ filter: false }"    class=" relative bg-stone-200/50  ">
+    <div   x-data="{ sort: false }"  class=" relative " >
     <!-- app bar section -->
     <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
         <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
         <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">تلفن همراه</div>
         <div class=" w-9 h-9 sm:h-11 sm:w-11 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
-            <a href="shoppingCart.html" class=" outline-none decoration-transparent " >
+            <a href="shoppingCart.html" class=" outline-none decoration-transparent ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-            </svg>
+                    stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
             </a>
         </div>
     </div>
@@ -31,7 +32,7 @@
     <!-- sort and filter bar -->
     <div class=" mx-2 flex md:hidden  items-center justify-around mt-3 h-11 mb-2 ">
         <!-- sort -->
-        <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-sm ">
+        <div @click="sort = !sort" class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-sm ">
             <div class=" hidden sx:flex items-center justify-between  ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
@@ -44,10 +45,10 @@
                         d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
                 </svg>
             </div>
-            <span class=" font-normal text-sm sm:text-base ">جدیدترین محصول</span>
+            <span class=" font-medium text-slate-700 text-sm sm:text-base ">جدیدترین محصول</span>
         </div>
         <!-- filter -->
-        <div class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-sm ">
+        <div @click="filter = !filter"  class=" bg-white rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-sm ">
             <div class=" hidden sx:flex items-center justify-between ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
@@ -55,13 +56,13 @@
                         d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                 </svg>
             </div>
-            <span class=" font-normal text-sm sm:text-base px-2 ">فیلتر : برند اپل</span>
+            <span  class=" font-medium text-slate-700 text-sm sm:text-base px-2 ">فیلتر : برند اپل</span>
         </div>
     </div>
 
     <!-- bottom navigations -->
     <div
-        class=" bg-white z-50 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
+        class=" bg-white z-30 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
         <ul x-data="{activeBottomTab : 1 , activeBottomClass : ' text-slate-800  ' }"
             class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
             <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
@@ -78,7 +79,8 @@
                 </a></li>
             <li @click="activeBottomTab = 2 " :class="activeBottomTab === 2 ?  activeBottomClass :  '  '   "
                 class="  flex items-center justify-center ">
-                <a  href="category.html" class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                <a href="category.html"
+                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
                     <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path
@@ -103,13 +105,14 @@
                 </a></li>
             <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
                 class="  flex items-center justify-center ">
-                <a href="login.html" class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+                <a href="login.html"
+                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
                     <div>
-                        <svg class="  " width="22" height="24"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="  " width="22" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
-                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <circle r="5" transform="matrix(-1 0 0 1 11 6)"  stroke-width="2" />
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke-width="2" />
                         </svg>
                     </div>
                     <span x-show="activeBottomTab === 4 " class=" font-semibold sx:text-base ss:text-lg "
@@ -122,44 +125,284 @@
     <nav
         class=" z-50 nb bg-white hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-lg shadow-md ">
         <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
-            <ul class="  flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
+            <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
                 <li>
-                    <a href="Home.html"><img class=" md:w-3/4 xl:w-full " src="/assets/images/Logo.svg" alt="LOGO"></a>
+                    <a href="Home.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/Logo.svg" alt="LOGO"></a>
                 </li>
                 <li
-                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                     <a href="Home.html">خانه</a></li>
                 <li
-                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
-                    <a href="#">تلفن همراه</a></li>
+                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    <a href="category.html">دسته بندی </a></li>
                 <li
-                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                     <a href="#">لپ تاپ</a></li>
                 <li
-                    class=" text-slate-800 transition-all duration-700 hover:text-gray-100 hover:bg-slate-700 rounded-xl cursor-pointer md:px-1 md:py-1 xl:px-3 xl:py-2 md:font-semibold md:text-[16px] xl:text-[20px] ">
+                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                     <a href="#">ساعت هوشمند</a></li>
             </ul>
             <div
-                class=" bg-gray-200/80 md:basis-4/12 lg:basis-4/12 xl:basis-4/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
-                <svg width="28" height="28" class="  mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
+                class=" relative bg-gray-200/80 md:basis-[27%] lg:basis-4/12 xl:basis-4/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
+                <!-- shopping cart link -->
+                <a href="shoppingCart.html"
+                    class=" absolute md:-right-11 lg:-right-16 outline-none decoration-transparent ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
+                        stroke="currentColor" class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800 ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                </a>
+                <!-- login link -->
+                <a href="login.html" class=" absolute -right-20 lg:-right-28 outline-none decoration-transparent ">
+                    <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7  " viewBox="0 0 22 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
+                            stroke="#0F172A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke="#0F172A" stroke-width="1.7" />
+                    </svg>
+                </a>
+                <!-- search svg -->
+                <svg width="28" height="28" class=" mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
                         stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
                 <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text"
-                    class=" placeholder-slate-900 bg-transparent border-1 border-white mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
+                    class=" placeholder-slate-900 bg-transparent border-1 border-white lg:mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
             </div>
         </div>
     </nav>
 
     <!-- main section -->
     <div
-        class="  mx-auto max-w-screen-2xl grid grid-cols-12  gap-y-3 gap-x-3 md:p-3 xl:gap-x-16 lg:pt-2 mb-7 md:pb-9  ">
+    class="  mx-auto max-w-screen-2xl grid grid-cols-12  gap-y-3 gap-x-3 md:p-3 xl:gap-x-16 lg:pt-2 mb-7 md:pb-9  ">
+
+    <button tabindex="-1" x-show="filter" @click="filter = false" class="inset-0 fixed bg-gray-600 opacity-70 z-40 "></button>
+    <button tabindex="-1" x-show="sort" @click="sort = false" class="inset-0 fixed bg-gray-600 opacity-70 z-40 "></button>
+
+     <!-- filter section onclick -->
+    <div x-show="filter" class=" fixed left-0 right-0 bottom-0 w-full bg-white border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">
+        <div class=" text-orange-500 font-bold text-lg mb-5  mr-5 mt-8 ">فیلتر</div>
+        <!-- desktop filters -->
+        <div class=" mb-1 ">
+            <div :class=" desktoptab ? '  '  :  ' ' " class="  my-3 py-1 rounded-xl transition-all duration-500 "
+                x-data="{ desktoptab : false }">
+                <!-- header -->
+                <div @click=" desktoptab = !desktoptab "
+                    class="   cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
+                    <li class=" flex items-center justify-start text-slate-800 py-3  ">
+                        <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+                            </svg>
+                        </div>
+                        <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">برند محصول</span>
+                    </li>
+                    <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="  stroke-slate-800 h-4 w-4" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- content -->
+                <div x-show="desktoptab" class=" transition-all  text-justify " x-transition:enter.duration.500ms
+                    x-transition:leave.duration.400ms>
+                    <div class="py-2 mr-2 ">
+                        <label for="apple" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="brand" id="apple">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">اپل</span>
+                        </label>
+                        <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="brand" id="xiaomi">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">شیائومی</span>
+                        </label>
+                        <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="brand" id="samsung">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">سامسونگ</span>
+                        </label>
+                        <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="brand" id="huawi">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">هواوی</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product color -->
+        <div class=" mb-1  ">
+            <div :class=" colorTab ? '  '  :  ' ' " class="  my-3  rounded-xl transition-all duration-500 "
+                x-data="{ colorTab : false }">
+                <!-- header -->
+                <div @click=" colorTab = !colorTab "
+                    class="   cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
+                    <li class=" flex items-center justify-start text-slate-800 py-3  ">
+                        <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+                            </svg>
+                        </div>
+                        <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">رنگ
+                            محصول</span>
+                    </li>
+                    <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="  stroke-slate-800 h-4 w-4" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- content -->
+                <div x-show="colorTab" class=" transition-all " x-transition:enter.duration.500ms
+                    x-transition:leave.duration.400ms>
+                    <div class="py-2">
+                        <label for="red" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="red">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">قرمز</span>
+                        </label>
+                        <label for="blue" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="blue">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">آبی</span>
+                        </label>
+                        <label for="yellow" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="yellow">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 "> زرد</span>
+                        </label>
+                        <label for="green" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="green">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">سبز</span>
+                        </label>
+                        <label for="purple" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="purple">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">بنفش</span>
+                        </label>
+                        <label for="pink" class="py-2 pr-4  flex items-center cursor-pointer">
+                            <input
+                                class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                type="checkbox" name="color" id="pink">
+                            <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">صورتی</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- price range -->
+        <div class=" mb-1 ">
+            <div :class=" priceTab ? '  '  :  ' ' " class="my-3py-1 rounded-xl transition-all duration-500 "
+                x-data="{ priceTab : false }">
+                <!-- header -->
+                <div @click=" priceTab = !priceTab "
+                    class="   cursor-pointer flex items-center justify-between w-12/12 pl-3 ">
+                    <li class=" flex items-center justify-start text-slate-800 py-3  ">
+                        <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                            </svg>
+                        </div>
+                        <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">محدوده
+                            قیمت</span>
+                    </li>
+                    <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="  stroke-slate-800 h-4 w-4" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- content -->
+                <div x-show="priceTab" class=" transition-all  " x-transition:enter.duration.500ms
+                    x-transition:leave.duration.400ms>
+                    <div class=" p-4 ">
+                        <div class=" flex items-center justify-between mt-6 ">
+                            <label for="medium-range" class="block mb-2 text-sm font-semibold text-red-400 ">۷۶,۰۰۰,۰۰۰
+                            </label>
+                            <label for="medium-range" class="block mb-2 text-sm font-semibold text-red-400 ">۱۲,۰۰۰,۰۰۰
+                            </label>
+                        </div>
+                        <input id="medium-range" type="range" value="50" class=" mt-7 
+                              w-full   h-2 mb-6 bg-slate-300 text-red-700 rounded-lg appearance-none cursor-pointer  ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- approve or reject buttons -->
+        <div class=" w-full flex items-center justify-around mt-9 ">
+            <span  @click="filter = !filter"  class=" py-4 w-[40%] bg-red-500  text-white rounded-lg shadow-md flex justify-center text-[18px] font-medium ">تایید</span>
+            <span  @click="filter = !filter"  class=" py-4 w-[40%] bg-red-300 border-2 border-rose-600 text-red-600  rounded-lg shadow-md flex justify-center text-[18px] font-medium ">لغو فیلتر</span>
+        </div>
+
+    </div>
+
+    <!-- sort section onclick -->
+     <div x-show="sort" class=" fixed left-0 right-0 bottom-0 w-full bg-white border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">         
+        <div class=" flex items-end justify-start mt-6 mr-2 " > 
+            <svg class=" -mr-3 stroke-slate-900 w-6 h-6" @click="sort = false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>              
+            <p class=" mr-5 font-medium text-[19px] text-stone-800 " >مرتب سازی بر اساس</p>
+        </div>
+        <ul class=" flex flex-col items-start mt-4 -mx-2 " >
+            <div class=" w-full " @click="sort =false " >
+                <li  class=" text-base text-gray-700 font-medium my-3 " >محبوب ترین</li>
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>       
+            <div class=" w-full " @click="sort =false " >     
+                <li  class=" text-base text-gray-700 font-medium my-3 " >پربازدید ترین</li>
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>            
+            <div class=" w-full " @click="sort =false " >
+                <li  class=" text-base text-gray-700 font-medium my-3 " >گران ترین</li>
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>            
+            <div class=" w-full  flex justify-between items-center " >
+                <li  class=" text-base text-gray-700 font-medium my-3 " >جدید ترین</li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>                  
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>           
+            <div class=" w-full " @click="sort =false " >
+                <li  class=" text-base text-gray-700 font-medium my-3 " >ارزان ترین</li>
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>            
+            <div class=" w-full " @click="sort =false " >
+                <li  class=" text-base text-gray-700 font-medium my-3 " >پرفروش ترین</li>
+            </div>
+            <span class=" w-full h-[1px] bg-gray-200 " ></span>
+        </ul>
+     </div>
 
         <!-- side bar -->
-        <div
-            class="  md:col-span-3 lg:col-span-3 xl:col-span-2 2xl:col-span-2  hidden md:block row-span-2 mr-1 xl:ml-6  ">
-            <div
-                class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
+        <div class="  md:col-span-3 lg:col-span-3 xl:col-span-2 2xl:col-span-2  hidden md:block row-span-2 mr-1 xl:ml-6  ">
+            <div class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
 
                 <!-- categories -->
                 <div class="mb-8">
@@ -207,11 +450,10 @@
                 <div class=" text-orange-500 font-bold mb-5 md:text-lg mr-5 mt-4 ">فیلتر</div>
                 <!-- desktop filters -->
                 <div class=" mb-1 ">
-                    <div :class=" dektopTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
-                        class="  my-3 hover:shadow-md  py-1 rounded-xl transition-all duration-500 "
-                        x-data="{ dektopTab : false }">
+                    <div :class=" desktoptab ? '  '  :  ' ' "
+                        class="  my-3 py-1 rounded-xl transition-all duration-500 " x-data="{ desktoptab : false }">
                         <!-- header -->
-                        <div @click=" dektopTab = !dektopTab "
+                        <div @click=" desktoptab = !desktoptab "
                             class="  cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
                             <li class=" flex items-center justify-start text-slate-800 py-3   ">
                                 <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
@@ -223,10 +465,10 @@
                                     </svg>
                                 </div>
                                 <span
-                                    class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-normal  ">برند
+                                    class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium  ">برند
                                     محصول</span>
                             </li>
-                            <svg :class=" dektopTab ? ' rotate-180 transition-all '  :  ' ' "
+                            <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="  stroke-black hidden lg:block md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -234,32 +476,32 @@
                             </svg>
                         </div>
                         <!-- content -->
-                        <div x-show="dektopTab" class=" transition-all  text-justify " x-transition:enter.duration.500ms
-                            x-transition:leave.duration.400ms>
+                        <div x-show="desktoptab" class=" transition-all  text-justify "
+                            x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
                             <div class="py-2">
                                 <label for="apple" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="apple">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">اپل</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">اپل</span>
                                 </label>
                                 <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="xiaomi">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">شیائومی</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">شیائومی</span>
                                 </label>
                                 <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="samsung">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">سامسونگ</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">سامسونگ</span>
                                 </label>
                                 <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="huawi">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">هواوی</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">هواوی</span>
                                 </label>
                             </div>
                         </div>
@@ -268,8 +510,7 @@
 
                 <!-- product color -->
                 <div class=" mb-1  ">
-                    <div :class=" colorTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
-                        class="  my-3 hover:shadow-md   rounded-xl transition-all duration-500 "
+                    <div :class=" colorTab ? '  '  :  ' ' " class="  my-3  rounded-xl transition-all duration-500 "
                         x-data="{ colorTab : false }">
                         <!-- header -->
                         <div @click=" colorTab = !colorTab "
@@ -283,7 +524,7 @@
                                             d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
                                     </svg>
                                 </div>
-                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-normal ">رنگ
+                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">رنگ
                                     محصول</span>
                             </li>
                             <svg :class=" colorTab ? ' rotate-180 transition-all '  :  ' ' "
@@ -301,37 +542,37 @@
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="red">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">قرمز</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">قرمز</span>
                                 </label>
                                 <label for="blue" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="blue">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">آبی</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">آبی</span>
                                 </label>
                                 <label for="yellow" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="yellow">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base "> زرد</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 "> زرد</span>
                                 </label>
                                 <label for="green" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="green">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">سبز</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">سبز</span>
                                 </label>
                                 <label for="purple" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="purple">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">بنفش</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">بنفش</span>
                                 </label>
                                 <label for="pink" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="pink">
-                                    <span class=" pr-8 font-normal md:text-sm xl:text-base ">صورتی</span>
+                                    <span class=" pr-8 font-normal md:text-sm xl:text-base text-slate-700 ">صورتی</span>
                                 </label>
                             </div>
                         </div>
@@ -340,8 +581,7 @@
 
                 <!-- price range -->
                 <div class=" mb-1 ">
-                    <div :class=" priceTab ? ' bg-gradient-to-br from-slate-100 via-gray-100 to-gray-100  transition-all '  :  ' ' "
-                        class="my-3 hover:shadow-md py-1 rounded-xl transition-all duration-500 "
+                    <div :class=" priceTab ? '  '  :  ' ' " class="my-3py-1 rounded-xl transition-all duration-500 "
                         x-data="{ priceTab : false }">
                         <!-- header -->
                         <div @click=" priceTab = !priceTab "
@@ -355,7 +595,7 @@
                                             d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
                                     </svg>
                                 </div>
-                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-normal ">محدوده
+                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">محدوده
                                     قیمت</span>
                             </li>
                             <svg :class=" priceTab ? ' rotate-180 transition-all '  :  ' ' "
@@ -475,8 +715,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">آیفون
                         ۱۴ پرومکس ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2  text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2  text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۵۸٫۵۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -522,8 +761,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">سامسونگ
                         s23 اولترا یک ترابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۶۲٫۲۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -563,8 +801,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">شیائومی
                         ۱۳ پرو ۱۲۸ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۵٫۶۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -610,8 +847,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">هواوی
                         p60 پرو ۱۲۸ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۲۸٫۵۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -651,8 +887,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">شیائومی
                         F5 پرو ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۸٫۷۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -697,8 +932,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">آیفون
                         ۱۴ پلاس ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۵۷٫۶۱۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -746,8 +980,7 @@
                         نوا
                         ۱۲۸ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۱۸٫۵۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -793,8 +1026,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">سامسونگ
                         زد فولد ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۴۴,۳۰۰,۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -834,8 +1066,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight "> هواوی
                         11i نوا ۱۲۸ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۲۳٫۸۰۰٫۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -881,8 +1112,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">سامسونگ
                         زد فلیپ ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۶۲٫۴۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -928,8 +1158,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">آیفون
                         ۱۳ مینی ۱۲۸ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۳۷٫۸۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -974,8 +1203,7 @@
                     <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
                         شیائومی k50 پرو ۲۵۶ گیگابایت
                     </h1>
-                    <h2
-                        class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                    <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
                         ۴۲٫۳۰۰٫۰۰۰ تومان
                     </h2>
                     <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
@@ -1129,6 +1357,7 @@
 
 
     <script src="//unpkg.com/alpinejs" defer></script>
+</div>
 </body>
 
 </html>

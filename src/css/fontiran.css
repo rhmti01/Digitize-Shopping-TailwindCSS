@@ -106,6 +106,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 div::-webkit-scrollbar {
+	width: 4px;
 	height: 3px;
 	cursor: pointer;
 }
