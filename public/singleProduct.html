@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body class="  bg-stone-200/50 select-none ">
+<body class=" font-bakh bg-stone-200/50 ">
     <!-- app bar section -->
     <div class="  bg-slate-400/0 sm:mx-5 flex md:hidden  items-center justify-between mt-7 mx-3  ">
         <div class="w-8 h-8 sm:h-10 sm:w-10 bg-white shadow-xl flex items-center justify-center rounded-md ">
@@ -23,7 +23,7 @@
             </svg>
             </a>
         </div>
-        <div class=" text-xl  font-semibold text-zinc-700 drop-shadow-lg sm:text-2xl ">گوشی آیفون ۱۴ پرومکس</div>
+        <div class=" text-xl  font-semibold text-zinc-700 drop-shadow-lg sm:text-2xl ">گوشی آیفون۱۳ پرومکس</div>
         <div class=" w-9 h-9 sm:h-11 sm:w-11 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
             <a href="shoppingCart.html" class=" outline-none decoration-transparent " >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -41,11 +41,8 @@
         <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
             <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
                 <li>
-                    <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/Logo.svg" alt="LOGO"></a>
+                    <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/Logo.svg" alt="LOGO"></a>
                 </li>
-                <li
-                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
-                    <a href="index.html">خانه</a></li>
                 <li
                     class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                     <a href="category.html">دسته بندی </a></li>
@@ -165,7 +162,7 @@
                     </svg>
                 </div>
                 <a class=" mx-1 mm:mx-2 inline font-normal text-base  sm:text-lg md:text-[17px] text-slate-600 tracking-tight "
-                    href="#">آیفون ۱۴</a>
+                    href="#">آیفون ۱۳</a>
             </div>
 
         </div>
@@ -174,36 +171,39 @@
         <div class="  md:bg-white col-span-12 rounded-xl md:col-span-9 lg:col-span-9 xl:col-span-10 2xl:col-span-10  ">
             <div class=" bg-black/ flex items-center justify-around w-full ">
                 <!-- phone description -->
-                <div x-data="{imageUrl: ' /assets/images/Apple-iPhone-14-Pro4.png ' }"
+                <div x-data="{imageUrl: '          /assets/images/Apple-IPhone-13-mini-128-GB/main.png          ' }"
                     class=" bg-green-900/ md:w-full flex items-center justify-around flex-col xl:flex-row md:items-start ">
                     <!-- description -->
-                    <div class=" bg-lime-400/ mt-2 w-full md:flex md:flex-row lg:pr-5 ">
+                    <div class=" bg-lime-400/ mt-2 w-full md:flex  md:flex-row lg:pr-5 ">
                         <!-- photo gallery -->
                         <div
-                            class="  bg-neutral-700/  items-center justify-around mb-7 md:mb-0 mt-7 md:mt-0 md:p-3 lg:p-5 ">
+                            class="  bg-neutral-700/  items-center justify-around mb-7 md:basis-[40%] md:mb-0 mt-7 md:mt-0 md:p-3 lg:p-5 ">
                             <img class=" w-[60%] max-w-[270px] sm:w-72 md:w-56 lg:w-64 mx-auto  " :src="imageUrl"
-                                alt="Apple iPhone 14 ProMax">
+                                alt="Apple iPhone 13 ProMax">
                             <!-- three part images -->
-                            <div class=" hidden md:flex items-center justify-evenly mt-7 ">
+                            <div class=" hidden md:flex items-center justify-between mt-7 ">
                                 <div
-                                    class=" bg-stone-50 w-[73px] h-[110px] flex items-center justify-center rounded-xl border-[1px] border-slate-400 mx-1 ">
-                                    <img src="/assets/images/sm (1).png" alt="IPhone"
-                                        class=" object-cover m-auto p-2.5 ">
+                                    class="  flex relative px-2 py-2 rounded-lg border-2 border-stone-300 cursor-pointer  ">
+                                    <img src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="IPhone"
+                                        class="  w-[70px] h-auto  ">
+                                        <span class=" absolute w-full h-full rounded-lg left-0 top-0  bg-cBlur z-50 opacity-25 " ></span>
                                 </div>
                                 <div
-                                    class=" bg-stone-50 w-[73px] h-[110px] flex items-center justify-center rounded-xl border-[1px] border-slate-400 mx-1 ">
-                                    <img src="/assets/images/sm (2).png" alt="IPhone"
-                                        class=" object-cover m-auto p-2.5 ">
+                                    class="  flex relative px-2 py-2 rounded-lg border-2 border-stone-300 cursor-pointer  ">
+                                    <img src="/assets/images/Apple-IPhone-13-mini-128-GB/first.png" alt="IPhone"
+                                        class="  w-[70px] h-auto  ">
+                                        <span class=" absolute w-full h-full rounded-lg left-0 top-0  bg-cBlur z-50 opacity-25 " ></span>
                                 </div>
                                 <div
-                                    class=" bg-stone-50 w-[73px] h-[110px] flex items-center justify-center rounded-xl border-[1px] border-slate-400 mx-1 ">
-                                    <img src="/assets/images/sm (3).png" alt="IPhone"
-                                        class=" object-cover m-auto p-2.5 ">
+                                    class="  flex relative px-2 py-2 rounded-lg border-2 border-stone-300 cursor-pointer  ">
+                                    <img src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="IPhone"
+                                        class="  w-[70px] h-auto  ">
+                                        <span class=" absolute w-full h-full rounded-lg left-0 top-0  bg-cBlur z-50 opacity-25 " ></span>
                                 </div>
                             </div>
                         </div>
                         <!--  -->
-                        <div class="  md:pr-3 xl:pr-8 md:pt-4 lg:p-5 ">
+                        <div class=" bg-red-600/  md:pr-3 xl:pr-8 md:pt-4 lg:p-5 ">
                             <div class="  p-2 rounded-md hidden text-red-400 font-light md:block  ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
@@ -218,11 +218,11 @@
                                 class="  jj:text-[21px] xxl:text-[22.5px] jj:tracking-tighter font-normal text-slate-800 text-[19px] mm:text-[22px]  mb-2 text-center mt-2 md:text-right md:font-[500]  ">
                                 گوشی
                                 آیفون
-                                ۱۴ پرومکس ۲۵۶ گیگابایت</h1>
+                                ۱۳ پرومکس ۲۵۶ گیگابایت</h1>
                             <h2
                                 class=" jj:tracking-tighter jj:underline jj:text-lg font-[400] text-slate-500 text-lg mm:text-[22px] md:text-  tracking-tighter text-center md:text-right md:text-slate-600 md:font-normal  ">
                                 Apple IPhone
-                                14 Pro Max
+                                13 Pro Max
                                 256GB</h2>
                             <!-- selection of color -->
                             <hr class=" mt-5 hidden md:block ">
@@ -230,44 +230,14 @@
                                 class=" mt-8 flex items-center justify-around  max-w-[300px] mx-auto md:mx-0 md:justify-start  md:mt-9 bg-lime-400/ ">
                                 <p class=" font-normal text-lg sm:text-[21px] md:ml-4 md:font-medium md:text-lg ">انتخاب
                                     رنگ :</p>
-                                <div class="flex items-center">
-                                    <div @click="imageUrl = ' /assets/images/Apple-iPhone-14-Pro1.png ' "
-                                        class=" hover:ring-2 hover:ring-fuchsia-900 bp duration-300 w-8 h-8 sm:w-9 sm:h-9 md:w-8 md:h-8 flex items-center justify-center rounded-xl md:rounded-[10px] cursor-pointer border-2 border-white">
-                                        <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4 sm:w-5 sm:h-5 md:w-4 md:h-4 stroke-white" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
+                                    <div  class="flex items-center">
+                                        <div
+                                            class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                        </div>
+                                        <div
+                                            class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                        </div>
                                     </div>
-                                    <div @click="imageUrl = ' /assets/images/Apple-iPhone-14-Pro2.png ' "
-                                        class=" hover:ring-2 hover:ring-amber-500 duration-300 w-8 h-8 sm:w-9 sm:h-9 md:w-8 md:h-8 flex items-center justify-center rounded-xl md:rounded-[10px] cursor-pointer border-2 border-white -mr-1.5  bg-gradient-to-r from-orange-300 to-amber-200 ">
-                                        <svg x-show="color === 'yellow' " xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4 sm:w-5 sm:h-5 md:w-4 md:h-4 stroke-white" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <div @click="imageUrl = ' /assets/images/Apple-iPhone-14-Pro3.png ' "
-                                        class=" hover:ring-2 hover:ring-stone-400 bs duration-300 w-8 h-8 sm:w-9 sm:h-9 md:w-8 md:h-8 flex items-center justify-center rounded-xl md:rounded-[10px] cursor-pointer   border-2  border-white -mr-1.5  ">
-                                        <svg x-show="color === 'multi' " xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4 sm:w-5 sm:h-5 md:w-4 md:h-4 stroke-white" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <div @click="imageUrl = ' /assets/images/Apple-iPhone-14-Pro4.png ' "
-                                        class=" hover:ring-2 hover:ring-gray-600 bb duration-300 w-8 h-8 sm:w-9 sm:h-9 md:w-8 md:h-8 flex items-center justify-center rounded-xl md:rounded-[10px] cursor-pointer border-2 border-white -mr-1.5">
-                                        <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4 sm:w-5 sm:h-5 md:w-4 md:h-4 stroke-white" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                </div>
                             </div>
                             <!-- seller data -->
                             <div
@@ -358,14 +328,15 @@
                             <div class=" w-full md:hidden  ">
                                 <div x-data="{ show: false }"
                                     class=" bg-white mx-4 sm:mx-8 p-4 pr-6 mt-4 shadow-md rounded-xl text-slate-800 tracking-tight ">
-                                    <h3 class=" font-[500] text-[21px] drop-shadow-2xl my-4 text-slate-900 ">نقد و برسی
+                                    <h3 class=" font-[500] text-[21px] drop-shadow-2xl mt-4 text-slate-900 ">نقد و برسی
                                         محصول</h3>
-                                    <p class=" inline text-lg font-light ">آیفون ۱۴ از سری پرچمداران ۲۰۲۳ اپل با قابلیت
+                                    <span class=" mt-2 mb-4 w-28 h-[3px] bg-red-500 absolute " ></span><br/><br/>
+                                    <p class=" inline text-lg font-light ">آیفون۱۳ از سری پرچمداران ۲۰۲۳ اپل با قابلیت
                                         های
-                                        فراوان است که در تاریخ ۱۴ سپتامبر به صورت رسمی رونمایی شد و پس از گذشت مدتی در
+                                        فراوان است که در تاریخ۱۳ سپتامبر به صورت رسمی رونمایی شد و پس از گذشت مدتی در
                                         تاریخ
                                         ۲۴ سپتامبر به بازارهای جهانی راه یافت و توانست بسیاری از طرفداران برند اپل را به
-                                        خرید متقاعد سازد. طراحی iPhone 14 Pro مشابه سری پیشین با تغییراتی جزئی است که در
+                                        خرید متقاعد سازد. طراحی iPhone 13 Pro مشابه سری پیشین با تغییراتی جزئی است که در
                                         رنگ
                                         های زیبای آبی، مشکی گرافیت، طلایی و نقره ای عرضه شده است.</p>
                                     <p x-show="show" class="  mb-2 inline text-lg font-light ">بدنه ابعادی معادل
@@ -413,7 +384,7 @@
                                                 بار
                                                 دیگر طراحی گوشی های خود، با فریم های پهن و زاویه دار را مورد استفاده
                                                 قرار
-                                                داد. آیفون ۱۴ پرو نیز به پیروی از نسل پیشین خود با یک طراحی بسیار جذاب
+                                                داد. آیفون۱۳ پرو نیز به پیروی از نسل پیشین خود با یک طراحی بسیار جذاب
                                                 رونمایی و عرضه شد. پنل پشتی و نمایشگر این گوشی مانند تمامی گوشی های
                                                 بالارده
                                                 با استفاده از شیشه ساخته شده که با یک لایه محافظ پوشیده شده است؛ در قسمت
@@ -424,7 +395,7 @@
                                                 آن
                                                 نیز درخشش خاصی را ایجاد کرده که بی نظیر است. رنگ های بسیار خاص در نظر
                                                 گرفته
-                                                شده برای iPhone 14 Pro در کنار طراحی منحصر به فرد یک پرچمدار بی همتا را
+                                                شده برای iPhone 13 Pro در کنار طراحی منحصر به فرد یک پرچمدار بی همتا را
                                                 به
                                                 دنیای تکنولوژی عرضه کرده که نگاه هر بیننده ای را متوجه خود می سازد.</p>
                                         </div>
@@ -443,7 +414,7 @@
                                                 ۱۲ مگاپیکسلی با دریچه دیافراگم f/2.8، لنز ۱۲ مگاپیکسلی فوق عریض با دریچه
                                                 دیافراگم f/1.8 و یک سنسور TOF 3D LiDAR تشکیل شده است که قابلیت های ویژه
                                                 ای
-                                                را به آیفون ۱۴ پرو بخشیده اند. در قسمت جلو نیز درون ناچ تعبیه شده در
+                                                را به آیفون۱۳ پرو بخشیده اند. در قسمت جلو نیز درون ناچ تعبیه شده در
                                                 بالای
                                                 نمایشگر یک لنز ۱۲ مگاپیکسلی عریض و یک سنسور عمق و تشخیص چهره از نوع SL
                                                 3D
@@ -456,7 +427,7 @@
                                                 باتری
                                             </h3>
                                             <p class=" mb-2  text-lg font-light  ">در بین هواداران گوشی های آیفون همیشه
-                                                دغدغه باتری و ظرفیت پایین آن وجود داشته است. آیفون ۱۴ پرو با باتری
+                                                دغدغه باتری و ظرفیت پایین آن وجود داشته است. آیفون۱۳ پرو با باتری
                                                 قدرتمند
                                                 3095 میلی آمپری توانسته است دغدغه های کاربران را به خوبی رفع کند. این
                                                 گوشی
@@ -525,7 +496,7 @@
 
                         <!-- price section -->
                         <div class="  w-full md:mt-2 md:p-2 rounded-xl flex justify-end xl:mt-11 ">
-                            <span class=" text-orange-500 font-medium text-xl ">۵۸٫۵۰۰٫۰۰۰ <span
+                            <span class=" text-orange-500 font-medium text-xl ">۳۵٫۶۰۰٫۰۰۰  <span
                                     class=" text-orange-500/85 font-[400] text-[18.5px] ">تومان</span></span>
                         </div>
 
@@ -546,7 +517,7 @@
                 <div class=" mb-5 py-5 px-8 lg:px-14 ">
                     <h1 class=" md:text-[22px] md:font-medium lg:text-[24px] text-slate-800 md:my-3 ">نقد و برسی این محصول </h1>
                     <p class=" md:font-light text-[18.5px] text-slate-800 mt-6 lg:mt-5 lg:text-[19px] ">آیفون ۱۳ از سری پرچمداران ۲۰۲۱ اپل با
-                        قابلیت های فراوان است که در تاریخ ۱۴ سپتامبر به صورت رسمی رونمایی شد و پس از گذشت مدتی در تاریخ
+                        قابلیت های فراوان است که در تاریخ۱۳ سپتامبر به صورت رسمی رونمایی شد و پس از گذشت مدتی در تاریخ
                         ۲۴ سپتامبر به بازارهای جهانی راه یافت و توانست بسیاری از طرفداران برند اپل را به خرید متقاعد
                         سازد. طراحی iPhone 13 Pro مشابه سری پیشین با تغییراتی جزئی است که در رنگ های زیبای آبی، مشکی
                         گرافیت، طلایی و نقره ای عرضه شده است؛ بدنه ابعادی معادل ۱۴۶.۷x۷۱.۵x۷.۷ میلی متر دارد و وزن آن
@@ -573,8 +544,8 @@
 
                 <!-- iphones banner image -->
                 <div class=" mb-2 py-1 px-8  flex items-center justify-center bg-black/ ">
-                    <img src="/assets/images/iphone-14-pro-finish-select-202209-6-7inch_GEO_US-removebg-preview.png"
-                        alt="iphones banner image" class=" lg:w-[700px] " >
+                    <img src="/assets/images/Apple-IPhone-13-mini-128-GB/desc.png"
+                        alt="iphones banner image" class="  md:w-[260px] lg:w-[320px] xl:w-[370px] " >
                 </div>
 
                 <!-- camera -->
@@ -625,7 +596,7 @@
                 <div class="  max-w-[90%l w-full flex flex-col items-center justify-evenly md:flex-row md:px-5 ">
                     <div class=" basis-1/3 md:basis-5/12  md:-mt-14  ">
                         <div class=" flex items-center py-7 px-5 ">
-                            <img class=" xl:w-36 md:w-28 2xl:w-40 " src="/assets/images/Logo.svg" alt="Digitize">
+                            <img class=" xl:w-36 md:w-28 2xl:w-40 " src="/assets/images/logo/Logo.svg" alt="Digitize">
                             <span class=" w-4 mx-2  h-[2px] bg-rose-500 "></span>
                         </div>
                         <p

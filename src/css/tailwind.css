@@ -1,4 +1,4 @@
-@import url(./fontiran.css);
+@import url(./edition.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,15 +44,15 @@
 }
 
     .bs{
-        background: linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219));
+        background: #166534;
     }
 
     .bb{
-        background: linear-gradient(to right, rgb(58, 65, 78), rgb(75, 85, 99));
+        background: #FEE2E2;
     }
 
     .bp{
-        background: linear-gradient(to right, rgb(130, 106, 148), rgb(141, 142, 210));
+        background: #155E75;
     }
 
     .uu{
