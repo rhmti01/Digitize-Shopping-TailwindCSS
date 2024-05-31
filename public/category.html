@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="rtl" class="dark" >
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body class=" font-bakh  overflow-auto bg-stone-200/50  ">
+<body class=" font-bakh  overflow-auto bg-stone-200/50 dark:bg-[#020617] ">
     <!-- app bar section -->
     <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
         <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
@@ -29,114 +29,122 @@
     </div>
 
 
+  <!-- bottom navigations -->
+  <div
+  class=" bg-white  dark:bg-slate-900  z-30 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 dark:ring-gray-700 rounded-t-3xl p-2  ">
+  <ul x-data="{activeBottomTab : 1 , activeBottomClass : ' text-slate-800 dark:text-slate-50  ' }"
+      class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
+      <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
+          class="  flex items-center justify-center ">
+          <a href="index.html"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+              <div><svg class="  " width="32" height="32" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M26.72 9.094 19.04 3.72c-2.093-1.466-5.307-1.386-7.32.174L5.04 9.107c-1.333 1.04-2.387 3.173-2.387 4.853v9.2c0 3.4 2.76 6.174 6.16 6.174h14.374c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.014-2.627-5.04ZM17 24c0 .547-.453 1-1 1-.547 0-1-.453-1-1v-4c0-.546.453-1 1-1 .547 0 1 .454 1 1v4Z" />
+                  </svg>
+              </div>
+              <span x-show="activeBottomTab === 1 " class=" font-semibold sx:text-base ss:text-lg "
+                  x-transition.duration.800ms>خانه</span>
+          </a></li>
+      <li @click="activeBottomTab = 2 " :class="activeBottomTab === 2 ?  activeBottomClass :  '  '   "
+          class="  flex items-center justify-center ">
+          <a href="category.html"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+              <div><svg class="  " width="34" height="34" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                          <path
+                              d="M10.257 2.833H7.565c-3.102 0-4.732 1.63-4.732 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.692c3.088 0 4.717-1.629 4.717-4.717V7.55c.014-3.088-1.615-4.718-4.703-4.718ZM26.45 2.833h-2.692c-3.089 0-4.718 1.63-4.718 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.691c3.088 0 4.718-1.629 4.718-4.717V7.55c0-3.088-1.63-4.718-4.718-4.718ZM26.45 19.026h-2.692c-3.089 0-4.718 1.629-4.718 4.717v2.692c0 3.088 1.63 4.718 4.718 4.718h2.691c3.088 0 4.718-1.63 4.718-4.718v-2.692c0-3.088-1.63-4.717-4.718-4.717ZM10.257 19.026H7.565c-3.102 0-4.732 1.629-4.732 4.717v2.692c0 3.103 1.63 4.732 4.718 4.732h2.692c3.088 0 4.717-1.63 4.717-4.718v-2.692c.014-3.102-1.615-4.731-4.703-4.731Z" />
+                      </g>
+                  </svg>
+              </div>
+              <span x-show="activeBottomTab === 2 " class=" font-semibold sx:text-base ss:text-lg "
+                  x-transition.duration.800ms>دسته بندی</span>
+          </a></li>
+      <li @click="activeBottomTab = 3 " :class="activeBottomTab === 3  ?  activeBottomClass :  '  '   "
+          class="  flex items-center justify-center ">
+          <a href="shoppingCart.html"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+              <div><svg class="  " width="34" height="34" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z" />
+                  </svg>
+              </div>
+              <span x-show="activeBottomTab === 3 " class=" font-semibold sx:text-base ss:text-lg "
+                  x-transition.duration.800ms>سبد خرید</span>
+          </a></li>
+      <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
+          class="  flex items-center justify-center ">
+          <a href="login.html"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+              <div>
+                  <svg class="  " width="22" height="24" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke-width="2" />
+                  </svg>
+              </div>
+              <span x-show="activeBottomTab === 4 " class=" font-semibold sx:text-base ss:text-lg "
+                  x-transition.duration.800ms>ورود</span>
+          </a></li>
+  </ul>
+</div>
 
-    <!-- bottom navigations -->
-    <div
-        class=" bg-white z-50 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
-        <ul x-data="{activeBottomTab : 2 , activeBottomClass : ' text-slate-800  ' }"
-            class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
-            <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
-                class="  flex items-center justify-center ">
-                <a href="index.html" class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 "
-                    href="#">
-                    <div><svg class="  " width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M26.72 9.094 19.04 3.72c-2.093-1.466-5.307-1.386-7.32.174L5.04 9.107c-1.333 1.04-2.387 3.173-2.387 4.853v9.2c0 3.4 2.76 6.174 6.16 6.174h14.374c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.014-2.627-5.04ZM17 24c0 .547-.453 1-1 1-.547 0-1-.453-1-1v-4c0-.546.453-1 1-1 .547 0 1 .454 1 1v4Z" />
+        <!-- navbar  -->
+        <nav
+            class=" z-50 nb bg-white  dark:bg-gray-900 hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-b-lg shadow-md ">
+            <div class=" bg-red-800/ container mx-auto flex items-center justify-between max-w-screen-2xl  ">
+                <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
+                    <li>
+                        <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/Logo.svg"
+                                alt="LOGO"></a>
+                    </li>
+                    <li
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        <a href="category.html">دسته بندی </a></li>
+                    <li
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        <a href="#">لپ تاپ</a></li>
+                    <li
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        <a href="#">ساعت هوشمند</a></li>
+                </ul>
+                <div
+                    class="  bg-gray-200/80 dark:bg-gray-700 dark:text-slate-100 md:basis-[24%] lg:basis-4/12 xl:basis-4/12 flex  items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
+                    <!-- search svg -->
+                    <svg width="28" height="28" class=" mx-2 stroke-slate-800 " fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text" id="search"
+                        class=" placeholder-slate-900 dark:placeholder-white bg-transparent border-1 border-white lg:mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
+                </div>
+                <div class="  ml-4 lg:ml-6 xl:ml-12 md:w-24 lg:w-28 xl:w-32  flex items-center justify-evenly bg-slate-400/   ">
+                    <!-- shopping cart link -->
+                    <a href="shoppingCart.html" class="   outline-none decoration-transparent  ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
+                            stroke="currentColor" class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800  dark:stroke-slate-50 ">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
-                    </div>
-                    <span x-show="activeBottomTab === 1 " class=" font-semibold sx:text-base ss:text-lg "
-                        x-transition.duration.800ms>خانه</span>
-                </a></li>
-            <li @click="activeBottomTab = 2 " :class="activeBottomTab === 2 ?  activeBottomClass :  '  '   "
-                class="  flex items-center justify-center ">
-                <a class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
-                    <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path
-                                    d="M10.257 2.833H7.565c-3.102 0-4.732 1.63-4.732 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.692c3.088 0 4.717-1.629 4.717-4.717V7.55c.014-3.088-1.615-4.718-4.703-4.718ZM26.45 2.833h-2.692c-3.089 0-4.718 1.63-4.718 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.691c3.088 0 4.718-1.629 4.718-4.717V7.55c0-3.088-1.63-4.718-4.718-4.718ZM26.45 19.026h-2.692c-3.089 0-4.718 1.629-4.718 4.717v2.692c0 3.088 1.63 4.718 4.718 4.718h2.691c3.088 0 4.718-1.63 4.718-4.718v-2.692c0-3.088-1.63-4.717-4.718-4.717ZM10.257 19.026H7.565c-3.102 0-4.732 1.629-4.732 4.717v2.692c0 3.103 1.63 4.732 4.718 4.732h2.692c3.088 0 4.717-1.63 4.717-4.718v-2.692c.014-3.102-1.615-4.731-4.703-4.731Z" />
-                            </g>
-                        </svg>
-                    </div>
-                    <span x-show="activeBottomTab === 2 " class=" font-semibold sx:text-base ss:text-lg "
-                        x-transition.duration.800ms>دسته بندی</span>
-                </a></li>
-            <li @click="activeBottomTab = 3 " :class="activeBottomTab === 3  ?  activeBottomClass :  '  '   "
-                class="  flex items-center justify-center ">
-                <a href="shoppingCart.html"
-                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
-                    <div><svg class="  " width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z" />
-                        </svg>
-                    </div>
-                    <span x-show="activeBottomTab === 3 " class=" font-semibold sx:text-base ss:text-lg "
-                        x-transition.duration.800ms>سبد خرید</span>
-                </a></li>
-            <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
-                class="  flex items-center justify-center ">
-                <a href="login.html"
-                    class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
-                    <div>
-                        <svg class="  " width="22" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    </a>
+                    <!-- login link -->
+                    <a href="login.html" class="  outline-none decoration-transparent ">
+                        <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7 stroke-slate-800  dark:stroke-slate-50 dark:text-white " viewBox="0 0 22 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke-width="2" />
+                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle r="5"  transform="matrix(-1 0 0 1 11 6)" stroke="currentColor" stroke-width="1.7" />
                         </svg>
-                    </div>
-                    <span x-show="activeBottomTab === 4 " class=" font-semibold sx:text-base ss:text-lg "
-                        x-transition.duration.800ms>ورود</span>
-                </a></li>
-        </ul>
-    </div>
-
-    <!-- navbar  -->
-    <nav
-        class=" z-50 nb bg-white hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-lg shadow-md ">
-        <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
-            <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
-                <li>
-                    <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/linear-logo.png" alt="LOGO"></a>
-                </li>
-                <li
-                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
-                    <a href="category.html">دسته بندی </a></li>
-                <li
-                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
-                    <a href="#">لپ تاپ</a></li>
-                <li
-                    class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
-                    <a href="#">ساعت هوشمند</a></li>
-            </ul>
-            <div
-                class=" relative bg-gray-200/80 md:basis-[27%] lg:basis-4/12 xl:basis-4/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
-                <!-- shopping cart link -->
-                <a href="shoppingCart.html" class=" absolute md:-right-11 lg:-right-16 outline-none decoration-transparent ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
-                        stroke="currentColor" class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800 ">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                    </svg>
-                </a>
-                <!-- login link -->
-                <a href="login.html" class=" absolute -right-20 lg:-right-28 outline-none decoration-transparent ">
-                    <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7  " viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
-                            stroke="#0F172A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                        <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke="#0F172A" stroke-width="1.7" />
-                    </svg>
-                </a>
-                <!-- search svg -->
-                <svg width="28" height="28" class=" mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
-                        stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text"
-                    class=" placeholder-slate-900 bg-transparent border-1 border-white lg:mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- main section -->
     <div class=" w-full mt-9 mb-28 md:pb-9  ">
@@ -194,8 +202,42 @@
 
 
 
+            <!-- theme switch menu -->
+            <div x-data="{ isOpen: false }" id="xData"
+            class="left-0 top-1/2 fixed  w-11 h-16 bg-zinc-500 rounded-r-2xl flex items-center justify-center ">
+            <div @click="isOpen = !isOpen" class=" flex items-center justify-center ">
+                <!-- light icon -->
+                <svg id="lightBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+                <!-- dark icon -->
+                <svg id="darkBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer  ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+
+            </div>
+            <button tabindex="-1" x-show="isOpen" @click="isOpen = false"
+                class="inset-0 fixed bg-transparent opacity-70"></button>
+            <div id="menu-list" x-show="isOpen"
+                class="bg-white w-32 mt-4 rounded-r-lg overflow-hidden border border-gray-200 absolute left-0">
+                <a @click="isOpen = !isOpen" data-theme="light" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">light</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="dark" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">dark</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="system" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">system</a>
+            </div>
+        </div>
+    </div>
 
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/src/js/theme.js"></script>
 </body>
 
 </html>

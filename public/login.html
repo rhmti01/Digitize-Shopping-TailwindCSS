@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="rtl" class="dark" >
 
 <head>
     <meta charset="UTF-8">
@@ -15,17 +15,54 @@
 <body class=" font-bakh bg-stone-200/50  ">
 
     <!-- login box -->
-    <div class=" w-full h-screen flex items-center justify-center " >
-        <div class=" max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-2 border-2 border-slate-100 bg-white rounded-2xl shadow-md px-4 md:px-6 py-11 md:py-14 w-68 " >
+    <div class="  bg-white dark:bg-[#020617] w-full h-screen flex items-center justify-center " >
+        <div class=" max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-2 border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-gray-900 rounded-2xl shadow-md px-4 md:px-6 py-11 md:py-14 w-68 " >
             <h1 class=" mx-auto text-center mb-7 md:mb-10 text-4xl md:text-[39px] text-rose-600 drop-shadow-2xl  font-bold " >دیجی تایز</h1>
-            <h2 class=" text-lg md:text-[19px] text-slate-800 font-semibold mb-4 md:mb-7 " >ورود | ثبت نام</h2>
-            <p class=" text-sm md:text-[15px] text-slate-500 mb-6 md:mb-10 " >سلام ! <br> لطفا شماره یا ایمیل خود را وارد کنید</p>
+            <h2 class=" text-lg md:text-[19px] text-slate-800 dark:text-slate-300 font-semibold mb-4 md:mb-7 " >ورود | ثبت نام</h2>
+            <p class=" text-sm md:text-[15px] text-slate-500 dark:text-slate-400 mb-6 md:mb-10 " >سلام ! <br> لطفا شماره یا ایمیل خود را وارد کنید</p>
             <input type="tel"  class=" inputltr  mb-8 md:mb-10 focus:outline-none focus:bg-white focus:border-blue-500 bg-slate-100 focus:shadow-lg border-2 border-slate-100 rounded-xl py-3 md:py-4 lg:py-5 px-6 md:px-7 lg:px-8  w-full hover:border-fuchsia-200 duration-300 "  type="text" name="text-grabber" >
             <button class=" bg-red-500 hover:bg-red-500/90 text-zinc-50 rounded-xl w-full py-3 md:py-4 lg:py-5 text-base md:text-[18px] lg:text-[19px] " >ورود</button>
         </div>
     </div>
 
+
+            <!-- theme switch menu -->
+            <div x-data="{ isOpen: false }" id="xData"
+            class="left-0 top-1/2 fixed  w-11 h-16 bg-zinc-500 rounded-r-2xl flex items-center justify-center ">
+            <div @click="isOpen = !isOpen" class=" flex items-center justify-center ">
+                <!-- light icon -->
+                <svg id="lightBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+                <!-- dark icon -->
+                <svg id="darkBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer  ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+
+            </div>
+            <button tabindex="-1" x-show="isOpen" @click="isOpen = false"
+                class="inset-0 fixed bg-transparent opacity-70"></button>
+            <div id="menu-list" x-show="isOpen"
+                class="bg-white w-32 mt-4 rounded-r-lg overflow-hidden border border-gray-200 absolute left-0">
+                <a @click="isOpen = !isOpen" data-theme="light" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">light</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="dark" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">dark</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="system" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">system</a>
+            </div>
+        </div>
+    </div>
+
+
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/src/js/theme.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="rtl" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -12,17 +12,18 @@
     <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
-<body x-data="{ filter: false }" class=" relative font-bakh bg-stone-200/50 dark/:bg-[color:var(--dark/b)] ">
+<body x-data="{ filter: false }" class=" relative font-bakh bg-stone-200/50 duration-300 dark:bg-[#020617] ">
     <div x-data="{ sort: false }" class=" relative ">
         <!-- app bar section -->
         <div class="  bg-slate-400/0 flex md:hidden  items-center justify-between mt-6 mx-3  ">
             <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
-            <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">تلفن همراه</div>
+            <div class=" text-xl  font-bold text-zinc-700 dark:text-zinc-400 drop-shadow-lg sm:text-2xl ">تلفن همراه
+            </div>
             <div
-                class=" w-9 h-9 sm:h-11 sm:w-11 bg-white  dark/:bg-[color:var(--lb)]  shadow-sm flex items-center justify-center rounded-[10px] ">
+                class=" w-9 h-9 sm:h-11 sm:w-11 bg-white dark:bg-slate-700  shadow-sm flex items-center justify-center rounded-[10px] ">
                 <a href="shoppingCart.html" class=" outline-none decoration-transparent ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
+                        stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 dark:stroke-slate-50">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
@@ -34,7 +35,7 @@
         <div class=" mx-2 flex md:hidden  items-center justify-around mt-3 h-11 mb-2 ">
             <!-- sort -->
             <div @click="sort = !sort"
-                class=" bg-white  dark/:bg-[color:var(--lb)]  rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-sm ">
+                class=" bg-white  dark:bg-slate-700  rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center  basis-6/12 shadow-sm ">
                 <div class=" hidden sx:flex items-center justify-between  ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
@@ -47,11 +48,12 @@
                             d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
                     </svg>
                 </div>
-                <span class=" font-medium text-slate-700 text-sm sm:text-base ">جدیدترین محصول</span>
+                <span class=" font-medium text-slate-700 dark:text-slate-100 text-sm sm:text-base ">جدیدترین
+                    محصول</span>
             </div>
             <!-- filter -->
             <div @click="filter = !filter"
-                class=" bg-white  dark/:bg-[color:var(--lb)]  rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-sm ">
+                class=" bg-white  dark:bg-slate-700  rounded-md py-2.5 px-1.5 mx-1 flex items-center justify-center basis-6/12 shadow-sm ">
                 <div class=" hidden sx:flex items-center justify-between ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6 stroke-red-500 ">
@@ -59,14 +61,15 @@
                             d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                     </svg>
                 </div>
-                <span class=" font-medium text-slate-700 text-sm sm:text-base px-2 ">فیلتر : برند اپل</span>
+                <span class=" font-medium text-slate-700 dark:text-slate-100 text-sm sm:text-base px-2 ">فیلتر : برند
+                    اپل</span>
             </div>
         </div>
 
         <!-- bottom navigations -->
         <div
-            class=" bg-white  dark/:bg-[color:var(--lb)]  z-30 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 rounded-t-3xl p-2  ">
-            <ul x-data="{activeBottomTab : 1 , activeBottomClass : ' text-slate-800  ' }"
+            class=" bg-white  dark:bg-slate-900  z-30 fixed md:hidden right-0 left-0 bottom-0 w-full drop-shadow-md ring-1 ring-gray-300 dark:ring-gray-700 rounded-t-3xl p-2  ">
+            <ul x-data="{activeBottomTab : 1 , activeBottomClass : ' text-slate-800 dark:text-slate-50  ' }"
                 class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
                 <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
                     class="  flex items-center justify-center ">
@@ -130,51 +133,57 @@
 
         <!-- navbar  -->
         <nav
-            class=" z-50 nb bg-white  dark/:bg-[color:var(--lb)]  hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-lg shadow-md ">
-            <div class="  container mx-auto flex items-center justify-between max-w-screen-2xl  ">
+            class=" z-50 nb bg-white  dark:bg-gray-900 hidden md:flex sticky top-0  md:p-2 lg:p-3 2xl:p-4  mb-1 lg:mb-2 rounded-b-lg shadow-md ">
+            <div class=" bg-red-800/ container mx-auto flex items-center justify-between max-w-screen-2xl  ">
                 <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
                     <li>
                         <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/Logo.svg"
                                 alt="LOGO"></a>
                     </li>
                     <li
-                        class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                         <a href="category.html">دسته بندی </a></li>
                     <li
-                        class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                         <a href="#">لپ تاپ</a></li>
                     <li
-                        class=" text-slate-800 transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
+                        class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                         <a href="#">ساعت هوشمند</a></li>
                 </ul>
                 <div
-                    class=" relative bg-gray-200/80 md:basis-[27%] lg:basis-4/12 xl:basis-4/12 flex items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
+                    class="  bg-gray-200/80 dark:bg-gray-700 dark:text-slate-100 md:basis-[24%] lg:basis-4/12 xl:basis-4/12 flex  items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
+                    <!-- search svg -->
+                    <svg width="28" height="28" class=" mx-2 stroke-slate-800 " fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text" id="search"
+                        class=" placeholder-slate-900 dark:placeholder-white bg-transparent border-1 border-white lg:mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
+                </div>
+                <div
+                    class="  ml-4 lg:ml-6 xl:ml-12 md:w-24 lg:w-28 xl:w-32  flex items-center justify-evenly bg-slate-400/   ">
                     <!-- shopping cart link -->
-                    <a href="shoppingCart.html"
-                        class=" absolute md:-right-11 lg:-right-16 outline-none decoration-transparent ">
+                    <a href="shoppingCart.html" class="   outline-none decoration-transparent  ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
-                            stroke="currentColor" class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800 ">
+                            stroke="currentColor"
+                            class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800  dark:stroke-slate-50 ">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
                     </a>
                     <!-- login link -->
-                    <a href="login.html" class=" absolute -right-20 lg:-right-28 outline-none decoration-transparent ">
-                        <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7  " viewBox="0 0 22 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <a href="login.html" class="  outline-none decoration-transparent ">
+                        <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7 stroke-slate-800  dark:stroke-slate-50 dark:text-white "
+                            viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z"
-                                stroke="#0F172A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                            <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke="#0F172A" stroke-width="1.7" />
+                                stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle r="5" transform="matrix(-1 0 0 1 11 6)" stroke="currentColor" stroke-width="1.7" />
                         </svg>
                     </a>
-                    <!-- search svg -->
-                    <svg width="28" height="28" class=" mx-2 " fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.4167 24.5002c6.1211 0 11.0833-4.9622 11.0833-11.0834 0-6.12113-4.9622-11.0833-11.0833-11.0833-6.12118 0-11.08336 4.96217-11.08336 11.0833 0 6.1212 4.96218 11.0834 11.08336 11.0834ZM25.6667 25.6668l-2.3334-2.3333"
-                            stroke="#222F5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                    <input placeholder="جستجوی نام محصول, نام برند, نام مدل و..." type="text" id="search"
-                        class=" placeholder-slate-900 bg-transparent border-1 border-white lg:mr-2 outline-none w-9/12 md:text-xs lg:text-[13px] xl:text-sm font-normal text-zinc-900 ">
                 </div>
             </div>
         </nav>
@@ -190,7 +199,7 @@
 
             <!-- filter section onclick -->
             <div x-show="filter"
-                class=" md:hidden fixed left-0 right-0 bottom-0 w-full bg-white  dark/:bg-[color:var(--lb)]  border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">
+                class=" md:hidden fixed left-0 right-0 bottom-0 w-full bg-white dark:bg-gray-900 border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">
                 <div class=" text-orange-500 font-bold text-lg mb-5  mr-5 mt-8 ">فیلتر</div>
                 <!-- desktop filters -->
                 <div class=" mb-1 ">
@@ -208,11 +217,11 @@
                                             d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
                                     </svg>
                                 </div>
-                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">برند
+                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium dark:text-gray-100 ">برند
                                     محصول</span>
                             </li>
                             <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
-                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4 dark:stroke-gray-100 " fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -225,27 +234,29 @@
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="apple">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">اپل</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">اپل</span>
                                 </label>
                                 <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="xiaomi">
                                     <span
-                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">شیائومی</span>
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">شیائومی</span>
                                 </label>
                                 <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="samsung">
                                     <span
-                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">سامسونگ</span>
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">سامسونگ</span>
                                 </label>
                                 <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="brand" id="huawi">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">هواوی</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">هواوی</span>
                                 </label>
                             </div>
                         </div>
@@ -259,7 +270,7 @@
                         <!-- header -->
                         <div @click=" colorTab = !colorTab "
                             class="   cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
-                            <li class=" flex items-center justify-start text-slate-800 py-3  ">
+                            <li class=" flex items-center justify-start text-slate-800  py-3  ">
                                 <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor"
@@ -268,11 +279,11 @@
                                             d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
                                     </svg>
                                 </div>
-                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">رنگ
+                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium dark:text-gray-100">رنگ
                                     محصول</span>
                             </li>
                             <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
-                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4 dark:stroke-gray-100 " fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -285,37 +296,44 @@
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="red">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">قرمز</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">قرمز</span>
                                 </label>
                                 <label for="blue" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="blue">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">آبی</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">آبی</span>
                                 </label>
                                 <label for="yellow" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="yellow">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 "> زرد</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">
+                                        زرد</span>
                                 </label>
                                 <label for="green" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="green">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">سبز</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">سبز</span>
                                 </label>
                                 <label for="purple" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="purple">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">بنفش</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">بنفش</span>
                                 </label>
                                 <label for="pink" class="py-2 pr-4  flex items-center cursor-pointer">
                                     <input
                                         class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                         type="checkbox" name="color" id="pink">
-                                    <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">صورتی</span>
+                                    <span
+                                        class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">صورتی</span>
                                 </label>
                             </div>
                         </div>
@@ -338,11 +356,11 @@
                                             d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
                                     </svg>
                                 </div>
-                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">محدوده
+                                <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium dark:text-gray-100 ">محدوده
                                     قیمت</span>
                             </li>
                             <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
-                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="  stroke-slate-800 h-4 w-4 dark:stroke-gray-100 " fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -379,42 +397,42 @@
 
             <!-- sort section onclick -->
             <div x-show="sort"
-                class=" md:hidden fixed left-0 right-0 bottom-0 w-full bg-white  dark/:bg-[color:var(--lb)]  border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">
+                class=" md:hidden fixed left-0 right-0 bottom-0 w-full bg-white dark:bg-gray-900  border-[1px] border-slate-200 shadow-2xl  z-50 rounded-t-3xl pb-8 px-8  ">
                 <div class=" flex items-end justify-start mt-6 mr-2 ">
                     <svg class=" -mr-3 stroke-slate-900 w-6 h-6" @click="sort = false"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <p class=" mr-5 font-medium text-[19px] text-stone-800 ">مرتب سازی بر اساس</p>
+                    <p class=" mr-5 font-medium text-[19px] text-stone-800 dark:text-slate-100 ">مرتب سازی بر اساس</p>
                 </div>
                 <ul class=" flex flex-col items-start mt-4 -mx-2 ">
                     <div class=" w-full " @click="sort =false ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">محبوب ترین</li>
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">محبوب ترین</li>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                     <div class=" w-full " @click="sort =false ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">پربازدید ترین</li>
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">پربازدید ترین</li>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                     <div class=" w-full " @click="sort =false ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">گران ترین</li>
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">گران ترین</li>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                     <div class=" w-full  flex justify-between items-center ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">جدید ترین</li>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-5 h-6">
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">جدید ترین</li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                            stroke="currentColor" class="w-5 h-6 dark:text-slate-100">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                     <div class=" w-full " @click="sort =false ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">ارزان ترین</li>
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">ارزان ترین</li>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                     <div class=" w-full " @click="sort =false ">
-                        <li class=" text-base text-gray-700 font-medium my-3 ">پرفروش ترین</li>
+                        <li class=" text-base text-gray-700 dark:text-slate-100 font-medium my-3 ">پرفروش ترین</li>
                     </div>
                     <span class=" w-full h-[1px] bg-gray-200 "></span>
                 </ul>
@@ -424,27 +442,29 @@
             <div
                 class="  md:col-span-3 lg:col-span-3 xl:col-span-2 2xl:col-span-2  hidden md:block row-span-2 mr-1 xl:ml-6  ">
                 <div
-                    class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white  dark/:bg-[color:var(--lb)]  md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
+                    class=" md:w-[calc(24vw_-_10px)] lg:w-[calc(24vw_-_10px)] xl:w-[calc(16vw_-_1px)] 2xl:w-60  z-20 border-gray-200 shadow-sm bg-white  dark:bg-gray-900  md:p-2  xl:px-3 rounded-2xl  max-h-[calc(100vh_-_110px)] overflow-auto sticky md:top-[80px] xl:top-[90px] ">
 
                     <!-- categories -->
                     <div class="mb-8">
                         <div class=" text-orange-500 font-extrabold mb-5 md:text-lg  mr-5 mt-4 ">دسته بندی</div>
                         <ul>
                             <li
-                                class=" flex items-center justify-start text-slate-900 py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 rounded-xl hover:text-slate-800 ">
-                                <div class=" md:w-9 md:h-9 bg-gray-200 rounded-3xl relative ">
+                                class=" flex items-center justify-start  py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl hover:text-slate-800 dark:hover:text-slate-50 ">
+                                <div class=" md:w-9 md:h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor"
-                                        class="md:w-8 md:h-9 absolute -bottom-2  md:-left-2  ">
+                                        class="md:w-8 md:h-9 absolute -bottom-2  md:-left-2 dark:text-slate-50 ">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
                                     </svg>
                                 </div>
-                                <span class="lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">تلفن همراه</span>
+                                <span
+                                    class=" text-slate-900 dark:text-white  lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">تلفن
+                                    همراه</span>
                             </li>
                             <li
-                                class=" flex items-center justify-start text-slate-400 py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 rounded-xl hover:text-slate-800 ">
-                                <div class=" md:w-9 md:h-9 bg-gray-200 rounded-3xl relative ">
+                                class=" flex items-center justify-start text-slate-400 py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl hover:text-slate-800 dark:hover:text-slate-50 ">
+                                <div class=" md:w-9 md:h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor"
                                         class="md:w-8 md:h-9 absolute -bottom-1 -left-2 ">
@@ -452,11 +472,11 @@
                                             d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
                                     </svg>
                                 </div>
-                                <span class="lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">لپ تاپ</span>
+                                <span class="    lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">لپ تاپ</span>
                             </li>
                             <li
-                                class=" flex items-center justify-start text-slate-400 py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 rounded-xl hover:text-slate-800 ">
-                                <div class=" md:w-9 md:h-9 bg-gray-200 rounded-3xl relative ">
+                                class=" flex items-center justify-start text-slate-400  py-3 hover:pr-7 transition-all duration-700 hover:cursor-pointer mb-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl hover:text-slate-800 dark:hover:text-slate-50 ">
+                                <div class=" md:w-9 md:h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor"
                                         class="md:w-8 md:h-9 absolute -bottom-1 -left-1 ">
@@ -464,7 +484,7 @@
                                             d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <span class="lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">ساعت
+                                <span class="  lg:mr-6 md:mr-4 cursor-pointer md:text-base font-medium ">ساعت
                                     هوشمند</span>
                             </li>
                         </ul>
@@ -478,23 +498,23 @@
                             <!-- header -->
                             <div @click=" desktoptab = !desktoptab "
                                 class="  cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
-                                <li class=" flex items-center justify-start text-slate-800 py-3   ">
-                                    <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <li class=" flex items-center justify-start  py-3   ">
+                                    <div class=" w-9 h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor"
-                                            class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                            class=" w-8 h-8 absolute -bottom-1 -left-1 dark:text-slate-300 ">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
                                         </svg>
                                     </div>
                                     <span
-                                        class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium  ">برند
+                                        class="lg:mr-6 md:mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium text-slate-800 dark:text-slate-50 ">برند
                                         محصول</span>
                                 </li>
                                 <svg :class=" desktoptab ? ' rotate-180 transition-all '  :  ' ' "
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="  stroke-black hidden lg:block md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    class="  stroke-slate-900 dark:stroke-slate-50 hidden lg:block md:h-4 md:w-4  xl:h-4.5 xl:w-4.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
@@ -507,28 +527,28 @@
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="brand" id="apple">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">اپل</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">اپل</span>
                                     </label>
                                     <label for="xiaomi" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="brand" id="xiaomi">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">شیائومی</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">شیائومی</span>
                                     </label>
                                     <label for="samsung" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="brand" id="samsung">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">سامسونگ</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">سامسونگ</span>
                                     </label>
                                     <label for="huawi" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="brand" id="huawi">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">هواوی</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">هواوی</span>
                                     </label>
                                 </div>
                             </div>
@@ -542,22 +562,23 @@
                             <!-- header -->
                             <div @click=" colorTab = !colorTab "
                                 class="   cursor-pointer flex items-center  justify-between w-12/12 pl-3 ">
-                                <li class=" flex items-center justify-start text-slate-800 py-3  ">
-                                    <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <li class=" flex items-center justify-start  py-3  ">
+                                    <div class=" w-9 h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor"
-                                            class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                            class="w-8 h-8 absolute -bottom-1 -left-1 dark:text-slate-300 ">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
                                         </svg>
                                     </div>
-                                    <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">رنگ
+                                    <span
+                                        class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium text-slate-800 dark:text-slate-50 ">رنگ
                                         محصول</span>
                                 </li>
                                 <svg :class=" colorTab ? ' rotate-180 transition-all '  :  ' ' "
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class=" hidden  lg:block md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    class=" hidden stroke-slate-900 dark:stroke-slate-50 lg:block md:h-4 md:w-4  xl:h-4.5 xl:w-4.5"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
@@ -570,20 +591,21 @@
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="red">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">قرمز</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">قرمز</span>
                                     </label>
                                     <label for="blue" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="blue">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">آبی</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">آبی</span>
                                     </label>
                                     <label for="yellow" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="yellow">
-                                        <span class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">
+                                        <span
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">
                                             زرد</span>
                                     </label>
                                     <label for="green" class="py-2 pr-4  flex items-center cursor-pointer">
@@ -591,21 +613,21 @@
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="green">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">سبز</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">سبز</span>
                                     </label>
                                     <label for="purple" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="purple">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">بنفش</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">بنفش</span>
                                     </label>
                                     <label for="pink" class="py-2 pr-4  flex items-center cursor-pointer">
                                         <input
                                             class=" form-checkbox text-amber-500 focus:ring-amber-600 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                             type="checkbox" name="color" id="pink">
                                         <span
-                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 ">صورتی</span>
+                                            class=" pr-4 font-normal md:text-sm xl:text-base text-slate-700 dark:text-slate-300 ">صورتی</span>
                                     </label>
                                 </div>
                             </div>
@@ -619,22 +641,23 @@
                             <!-- header -->
                             <div @click=" priceTab = !priceTab "
                                 class="   cursor-pointer flex items-center justify-between w-12/12 pl-3 ">
-                                <li class=" flex items-center justify-start text-slate-800 py-3  ">
-                                    <div class=" w-9 h-9 bg-gray-200 rounded-3xl relative ">
+                                <li class=" flex items-center justify-start  py-3  ">
+                                    <div class=" w-9 h-9 bg-gray-200 dark:bg-zinc-700 rounded-3xl relative ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor"
-                                            class="w-8 h-8 absolute -bottom-1 -left-1 ">
+                                            class="w-8 h-8 absolute -bottom-1 -left-1 dark:text-slate-300 ">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
                                         </svg>
                                     </div>
-                                    <span class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium ">محدوده
+                                    <span
+                                        class="mr-4 cursor-pointer md:text-[15.3px] xl:text-base font-medium text-slate-800 dark:text-slate-50 ">محدوده
                                         قیمت</span>
                                 </li>
                                 <svg :class=" priceTab ? ' rotate-180 transition-all '  :  ' ' "
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="hidden lg:block  md:h-4 md:w-4  xl:h-5 xl:w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    class="hidden stroke-slate-900 dark:stroke-slate-50 lg:block  md:h-4 md:w-4  xl:h-4.5 xl:w-4.55"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
@@ -662,43 +685,43 @@
 
             <!-- sort section -->
             <div
-                class="col-span-8 md:col-span-9  lg:col-span-9 xl:col-span-10 2xl:col-span-10  hidden bg-white  dark/:bg-[color:var(--lb)]  md:mx-2 md:py-2 border-gray-100 shadow-sm rounded-xl md:flex md:items-center xl:mx-3 ">
+                class="col-span-8 md:col-span-9  lg:col-span-9 xl:col-span-10 2xl:col-span-10  hidden bg-white dark:bg-gray-900  md:mx-2 md:py-2 border-gray-100 shadow-sm rounded-xl md:flex md:items-center xl:mx-3 ">
                 <div x-data="{sort : 1, activeClass : ' font-semibold text-gray-900 ' }"
-                    class="bg-white  dark/:bg-[color:var(--lb)]  px-4 flex items-center gap-x-4 text-gray-400 rounded-lg">
+                    class="bg-white dark:bg-gray-900   px-4 flex items-center gap-x-4 text-gray-400 rounded-lg">
                     <div
-                        class="bg-red-100/80 p-1.5 space-x-2 rounded-md flex justify-center items-center cursor-pointer ">
+                        class="bg-red-100/80 dark:bg-gray-100 p-1.5 space-x-2 rounded-md flex justify-center items-center cursor-pointer ">
                         <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-7 lg:w-7 md:w-6 md:h-6 stroke-orange-400"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                         </svg>
                     </div>
-                    <button @click="sort = 1" :class=" sort ===1 ? activeClass : '' "
-                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700 hover:shadow-sm ">
+                    <button @click="sort = 1" :class=" sort ===1 ? activeClass : ''  "
+                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700   dark:text-white  hover:shadow-sm ">
                         <span>محبوب ترین</span>
                         <span x-show=" sort===1"
                             class="  w-1.5 h-1.5 bg-red-400 rounded-full absolute top-1 -left-2"></span>
                     </button>
-                    <button @click="sort = 2" :class=" sort ===2 ? activeClass : '' "
-                        class=" h xl:block py-2 font-normal md:text-sm 2xl:text-base 3xl:text-lg lg:px-1   text-gray-400 relative hover:text-gray-700 hover:shadow-sm ">
+                    <button @click="sort = 2" :class=" sort ===2 ? activeClass : ''  "
+                        class=" h xl:block py-2 font-normal md:text-sm 2xl:text-base 3xl:text-lg lg:px-1   text-gray-400 relative hover:text-gray-700   dark:text-white  hover:shadow-sm ">
                         <span>پربازدید ترین</span>
                         <span x-show=" sort===2"
                             class="  w-1.5 h-1.5 bg-red-400 rounded-full absolute top-1 -left-2"></span>
                     </button>
-                    <button @click="sort = 3" :class=" sort ===3 ? activeClass : '' "
-                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700 hover:shadow-sm ">
+                    <button @click="sort = 3" :class=" sort ===3 ? activeClass : ''  "
+                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700   dark:text-white  hover:shadow-sm ">
                         <span x-show=" sort===3"
                             class="  w-1.5 h-1.5 bg-red-400 rounded-full absolute top-1 -left-2"></span>
                         <span>گران ترین</span>
                     </button>
-                    <button @click="sort = 4" :class=" sort ===4 ? activeClass : '' "
-                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700 hover:shadow-sm ">
+                    <button @click="sort = 4" :class=" sort ===4 ? activeClass : ''  "
+                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700   dark:text-white  hover:shadow-sm ">
                         <span x-show=" sort===4"
                             class="  w-1.5 h-1.5 bg-red-400 rounded-full absolute top-1 -left-2"></span>
                         <span>ارزان ترین</span>
                     </button>
-                    <button @click="sort = 5" :class=" sort ===5 ? activeClass : '' "
-                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700 hover:shadow-sm ">
+                    <button @click="sort = 5" :class=" sort ===5 ? activeClass : ''  "
+                        class=" py-2 font-normal md:text-[15.5px] 2xl:text-base 3xl:text-[17px] lg:px-1   text-gray-400 relative hover:text-gray-700  dark:text-white  hover:shadow-sm ">
                         <span x-show=" sort===5"
                             class="  w-1.5 h-1.5 bg-red-400 rounded-full absolute top-1 -left-2"></span>
                         <span>پرفروش ترین</span>
@@ -719,32 +742,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100  text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -755,32 +783,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -790,32 +823,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -825,32 +863,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -860,32 +903,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -895,32 +943,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -930,32 +983,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -965,32 +1023,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -1000,32 +1063,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -1035,32 +1103,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -1070,32 +1143,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -1105,32 +1183,37 @@
 
                     <!-- single product -->
                     <div
-                        class="div relative bg-white  dark/:bg-[color:var(--lb)]  p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 xl:p-2 ">
+                        class="div relative bg-white  dark:bg-gray-900 p-1.5 m-1 text-xs rounded-xl md:p-1.5 md:rounded-2xl shadow-sm hover:shadow-gray-400/80 md:hover:shadow-lg duration-300 border border-gray-100 dark:border-gray-900 xl:p-2 ">
                         <div
-                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 border border-gray-200/30 rounded-xl flex items-center justify-center  ">
-                            <div class="hidden sm:block w-6 h-3  absolute  left-3   top-3  rounded-xl  bg-rose-500   ">
+                            class="img w-full h-40 2xl:h-48 bg-stone-200/30 dark:bg-gray-800 border border-gray-200/30 dark:border-gray-800 rounded-xl flex items-center justify-center  ">
+                            <div class="hidden sm:block w-6 h-3  absolute  left-4   top-4  rounded-xl  bg-rose-500   ">
                             </div>
                             <img class="  py-4 w-[86px]  sm:w-[102px] md:w-[48%] md:max-w-[110px]  xl:w-[44%] xl:min-w-[90px]    "
                                 src="/assets/images/Apple-IPhone-13-mini-128-GB/main.png" alt="Apple Watch">
                         </div>
                         <div class=" flex items-center justify-between mt-3 px-1">
-                            <p class=" text-stone-400 text-sm xl:text-lg">اپل</p>
-                            <div  class="flex items-center">
+                            <p class=" text-stone-400  dark:text-stone-300 text-sm xl:text-lg">اپل</p>
+                            <div class="flex items-center">
                                 <div
-                                    class=" bg-gradient-to-r from-violet-200 to-stone-200 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white">
+                                    class=" bg-[#21262d]  duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent ">
                                 </div>
                                 <div
-                                    class=" bg-gradient-to-r from-gray-700 to-slate-900 duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white -mr-1.5">
+                                    class=" bg-[#ffcdc1] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5">
+                                </div>
+                                <div
+                                    class=" bg-[#344533] duration-300 w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8  flex items-center justify-center rounded-[10px]  md:rounded-xl  border-2 border-white dark:border-transparent -mr-1.5 ">
                                 </div>
                             </div>
                         </div>
-                        <h1 class=" px-1 font-medium mt-3 mb-1  text-gray-700 text-base xl:text-lg  tracking-tight ">
-                        آیفون 13 پرومکس 256 گیگابایت
+                        <h1
+                            class=" px-1 font-medium mt-3 mb-1  text-gray-700  dark:text-gray-100 text-base xl:text-lg  tracking-tight ">
+                            آیفون ۱۳ پرومکس ۲۵۶ گیگابایت
                         </h1>
-                        <h2 class="  px-2 my-2   text-orange-500/90 text-left text-base xl:text-lg  font-medium ">
+                        <h2
+                            class="  px-2 my-2   text-orange-500/90 dark:text-orange-300/80  text-left text-base xl:text-lg  font-medium ">
                             ۳۵٫۶۰۰٫۰۰۰ تومان
                         </h2>
-                        <hr class=" w-11/12 mx-auto mt-2 bg-zinc-500 ">
+                        <div class=" w-11/12 mx-auto mt-2 h-[2px] bg-zinc-200 dark:bg-slate-700 "></div>
                         <a href="singleProduct.html"
                             class=" font-semibold text-base my-1.5  text-center duration-300 text-orange-600 drop-shadow-xl shadow-orange-600 hover:text-orange-600  block  mx-auto  xl:text-lg   ">مشاهده
                             و سفارش </a>
@@ -1145,73 +1228,53 @@
 
         </div>
 
-        <!-- number counter  -->
+        <!-- page pagination  -->
         <div class=" hidden md:flex w-full h-auto  justify-center md:scale-[68%] lg:scale-[70%] 2xl:scale-[77%] ">
             <ul class=" flex items-center justify-around  pb-8  ">
                 <li
-                    class=" ls duration-300 py-3 px-5 md:px-3 lg:px-4 rounded-lg text-slate-800 font-extrabold text-[32px] drop-shadow-2xl   cursor-pointer flex items-center justify-center  ">
-                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
-                        <path
-                            d="M1 12C1 14.4477 1.13246 16.3463 1.46153 17.827C1.78807 19.2963 2.29478 20.2921 3.00136 20.9986C3.70794 21.7052 4.70365 22.2119 6.17298 22.5385C7.65366 22.8675 9.55232 23 12 23C14.4477 23 16.3463 22.8675 17.827 22.5385C19.2963 22.2119 20.2921 21.7052 20.9986 20.9986C21.7052 20.2921 22.2119 19.2963 22.5385 17.827C22.8675 16.3463 23 14.4477 23 12C23 9.55232 22.8675 7.65366 22.5385 6.17298C22.2119 4.70365 21.7052 3.70794 20.9986 3.00136C20.2921 2.29478 19.2963 1.78807 17.827 1.46153C16.3463 1.13246 14.4477 1 12 1C9.55232 1 7.65366 1.13246 6.17298 1.46153C4.70365 1.78807 3.70794 2.29478 3.00136 3.00136C2.29478 3.70794 1.78807 4.70365 1.46153 6.17298C1.13246 7.65366 1 9.55232 1 12Z"
-                            stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M15.6219 16.2798L16.7758 15.55L16.8599 15.4968C17.2965 15.221 17.7981 14.9042 18.173 14.5782C18.6096 14.1984 19.2451 13.4922 19.2451 12.4001C19.2451 11.3079 18.6096 10.6017 18.173 10.222C17.7981 9.89592 17.2965 9.5791 16.8599 9.30336L16.7758 9.25018L15.6219 8.52038L15.5352 8.46546L15.5352 8.46545C15.102 8.19104 14.5976 7.87154 14.1452 7.67576C13.6414 7.45771 12.6041 7.13055 11.5606 7.79057C11.1173 8.07098 10.8327 8.43221 10.6478 8.78983C10.3467 8.60113 10.0004 8.39328 9.67906 8.25423C9.23608 8.06252 8.24373 7.73943 7.23868 8.37512C6.30444 8.96603 6.11501 9.92572 6.05665 10.3564C5.99946 10.7784 5.99977 11.2905 6.00004 11.7294L6.00007 11.817V12.9847L6.00004 13.0723C5.99977 13.5112 5.99946 14.0234 6.05665 14.4454C6.11501 14.876 6.30444 15.8357 7.23868 16.4266C8.24373 17.0623 9.23608 16.7392 9.67906 16.5475C10.0006 16.4084 10.3472 16.2003 10.6484 16.0115C10.8333 16.3687 11.1178 16.7295 11.5606 17.0096C12.6041 17.6696 13.6414 17.3424 14.1452 17.1244C14.5976 16.9286 15.102 16.6091 15.5352 16.3347L15.6219 16.2798ZM10.2488 13.8979C10.2449 13.6741 10.245 13.4478 10.2451 13.2287V13.2287L10.2451 13.1299V11.6703L10.2451 11.5715V11.5715C10.245 11.3529 10.2449 11.1271 10.2488 10.9038L9.8463 10.6493C9.02575 10.1303 8.61548 9.87077 8.30778 10.0654C8.00007 10.26 8.00007 10.779 8.00007 11.817V12.9847C8.00007 14.0227 8.00007 14.5417 8.30778 14.7363C8.61548 14.931 9.02575 14.6715 9.8463 14.1525L10.2488 13.8979ZM15.7067 10.9405C16.7323 11.5892 17.2451 11.9135 17.2451 12.4001C17.2451 12.8866 16.7323 13.211 15.7067 13.8597L14.5528 14.5895C13.5272 15.2382 13.0143 15.5626 12.6297 15.3193C12.2451 15.076 12.2451 14.4273 12.2451 13.1299V11.6703C12.2451 10.3728 12.2451 9.72411 12.6297 9.48084C13.0143 9.23757 13.5272 9.56193 14.5528 10.2107L15.7067 10.9405Z"
-                            fill="#212135" />
-                    </svg>
-                </li>
-                <li
                     class=" ls duration-300 py-3 px-5 md:px-3 lg:px-4 rounded-lg text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer flex items-center justify-center  ">
-                    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
+                    <svg class=" stroke-slate-800  text-slate-800 dark:stroke-slate-50 dark:text-slate-50 " width="38"
+                        height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
                         <path
                             d="M1 12C1 14.4477 1.13246 16.3463 1.46153 17.827C1.78807 19.2963 2.29478 20.2921 3.00136 20.9986C3.70794 21.7052 4.70365 22.2119 6.17298 22.5385C7.65366 22.8675 9.55232 23 12 23C14.4477 23 16.3463 22.8675 17.827 22.5385C19.2963 22.2119 20.2921 21.7052 20.9986 20.9986C21.7052 20.2921 22.2119 19.2963 22.5385 17.827C22.8675 16.3463 23 14.4477 23 12C23 9.55232 22.8675 7.65366 22.5385 6.17298C22.2119 4.70365 21.7052 3.70794 20.9986 3.00136C20.2921 2.29478 19.2963 1.78807 17.827 1.46153C16.3463 1.13246 14.4477 1 12 1C9.55232 1 7.65366 1.13246 6.17298 1.46153C4.70365 1.78807 3.70794 2.29478 3.00136 3.00136C2.29478 3.70794 1.78807 4.70365 1.46153 6.17298C1.13246 7.65366 1 9.55232 1 12Z"
-                            stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 8L14 12L10 16" stroke="#212135" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path class="  " d="M10 8L14 12L10 16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </li>
                 <li
-                    class="  py-3 px-5 md:px-3 lg:px-4 hover:bg-red-300/60 mx-2 rounded-xl duration-500 text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer bg-red-300 ">
-                    ۱</li>
-                <li
-                    class="  py-3 px-5 md:px-3 lg:px-4 hover:bg-red-300/60 mx-2 rounded-xl duration-500 text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
-                    ۲</li>
-                <li
-                    class="  py-3 px-5 md:px-3 lg:px-4 hover:bg-red-300/60 mx-2 rounded-xl duration-500 text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
-                    ۳</li>
-                <li
-                    class="  py-3 px-5 md:px-3 lg:px-4 hover:bg-red-300/60 mx-2 rounded-xl duration-500 text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
-                    ۴</li>
-                <li
-                    class="  py-3 px-5 md:px-3 lg:px-4 hover:bg-red-300/60 mx-2 rounded-xl duration-500 text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
+                    class="  py-1 px-5 md:px-3 lg:px-4 hover:bg-red-300/60  dark:hover:bg-red-400 mx-2 rounded-xl duration-500 text-slate-800 dark:text-slate-200 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer  ">
                     ۵</li>
                 <li
-                    class=" ls duration-300 py-3 px-5 md:px-3 lg:px-4 rounded-lg text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer flex items-center justify-center  ">
-                    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
-                        <path
-                            d="M1 12C1 14.4477 1.13246 16.3463 1.46153 17.827C1.78807 19.2963 2.29478 20.2921 3.00136 20.9986C3.70794 21.7052 4.70365 22.2119 6.17298 22.5385C7.65366 22.8675 9.55232 23 12 23C14.4477 23 16.3463 22.8675 17.827 22.5385C19.2963 22.2119 20.2921 21.7052 20.9986 20.9986C21.7052 20.2921 22.2119 19.2963 22.5385 17.827C22.8675 16.3463 23 14.4477 23 12C23 9.55232 22.8675 7.65366 22.5385 6.17298C22.2119 4.70365 21.7052 3.70794 20.9986 3.00136C20.2921 2.29478 19.2963 1.78807 17.827 1.46153C16.3463 1.13246 14.4477 1 12 1C9.55232 1 7.65366 1.13246 6.17298 1.46153C4.70365 1.78807 3.70794 2.29478 3.00136 3.00136C2.29478 3.70794 1.78807 4.70365 1.46153 6.17298C1.13246 7.65366 1 9.55232 1 12Z"
-                            stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14 16L10 12L14 8" stroke="#212135" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </li>
+                    class="  py-1 px-5 md:px-3 lg:px-4 hover:bg-red-300/60  dark:hover:bg-red-400 mx-2 rounded-xl duration-500 text-slate-800 dark:text-slate-200 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
+                    ۴</li>
+                <li
+                    class="  py-1 px-5 md:px-3 lg:px-4 hover:bg-red-300/60  dark:hover:bg-red-400 mx-2 rounded-xl duration-500 text-slate-800 dark:text-slate-200 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
+                    ۳</li>
+                <li
+                    class="  py-1 px-5 md:px-3 lg:px-4 hover:bg-red-300/60  dark:hover:bg-red-400 mx-2 rounded-xl duration-500 text-slate-800 dark:text-slate-200 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer ">
+                    ۲</li>
+                <li
+                    class="  py-1 px-5 md:px-3 lg:px-4 hover:bg-red-300/60  dark:hover:bg-red-400 mx-2 rounded-xl duration-500 text-slate-800 dark:text-slate-200 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer bg-red-300 dark:bg-red-400 ">
+                    ۱</li>
                 <li
                     class=" ls duration-300 py-3 px-5 md:px-3 lg:px-4 rounded-lg text-slate-800 font-extrabold text-[32px] drop-shadow-2xl  cursor-pointer flex items-center justify-center  ">
-                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
+                    <svg class=" stroke-slate-800  text-slate-800 dark:stroke-slate-50 dark:text-slate-50 " width="38"
+                        height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg ">
                         <path
                             d="M1 12C1 14.4477 1.13246 16.3463 1.46153 17.827C1.78807 19.2963 2.29478 20.2921 3.00136 20.9986C3.70794 21.7052 4.70365 22.2119 6.17298 22.5385C7.65366 22.8675 9.55232 23 12 23C14.4477 23 16.3463 22.8675 17.827 22.5385C19.2963 22.2119 20.2921 21.7052 20.9986 20.9986C21.7052 20.2921 22.2119 19.2963 22.5385 17.827C22.8675 16.3463 23 14.4477 23 12C23 9.55232 22.8675 7.65366 22.5385 6.17298C22.2119 4.70365 21.7052 3.70794 20.9986 3.00136C20.2921 2.29478 19.2963 1.78807 17.827 1.46153C16.3463 1.13246 14.4477 1 12 1C9.55232 1 7.65366 1.13246 6.17298 1.46153C4.70365 1.78807 3.70794 2.29478 3.00136 3.00136C2.29478 3.70794 1.78807 4.70365 1.46153 6.17298C1.13246 7.65366 1 9.55232 1 12Z"
-                            stroke="#212135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.62321 16.2798L7.46936 15.55L7.38519 15.4968C6.94863 15.221 6.44704 14.9042 6.07215 14.5782C5.63549 14.1984 5 13.4922 5 12.4001C5 11.3079 5.63549 10.6017 6.07215 10.222C6.44705 9.89592 6.94865 9.5791 7.38521 9.30336L7.46936 9.25018L8.62321 8.52038L8.70994 8.46546L8.70995 8.46545C9.14314 8.19104 9.64749 7.87154 10.0999 7.67576C10.6038 7.45771 11.641 7.13055 12.6845 7.79057C13.1278 8.07098 13.4124 8.43221 13.5974 8.78983C13.8984 8.60113 14.2447 8.39328 14.5661 8.25423C15.009 8.06252 16.0014 7.73943 17.0064 8.37512C17.9407 8.96603 18.1301 9.92572 18.1885 10.3564C18.2457 10.7784 18.2453 11.2905 18.2451 11.7294L18.245 11.817V12.9847L18.2451 13.0723C18.2453 13.5112 18.2457 14.0234 18.1885 14.4454C18.1301 14.876 17.9407 15.8357 17.0064 16.4266C16.0014 17.0623 15.009 16.7392 14.5661 16.5475C14.2445 16.4084 13.8979 16.2003 13.5967 16.0115C13.4118 16.3687 13.1273 16.7295 12.6845 17.0096C11.641 17.6696 10.6038 17.3424 10.0999 17.1244C9.64749 16.9286 9.14313 16.6091 8.70994 16.3347L8.62321 16.2798ZM13.9963 13.8979C14.0002 13.6741 14.0001 13.4478 14 13.2287V13.2287L14 13.1299V11.6703L14 11.5715V11.5715C14.0001 11.3529 14.0002 11.1271 13.9963 10.9038L14.3988 10.6493C15.2194 10.1303 15.6296 9.87077 15.9373 10.0654C16.245 10.26 16.245 10.779 16.245 11.817V12.9847C16.245 14.0227 16.245 14.5417 15.9373 14.7363C15.6296 14.931 15.2194 14.6715 14.3988 14.1525L13.9963 13.8979ZM8.53846 10.9405C7.51282 11.5892 7 11.9135 7 12.4001C7 12.8866 7.51282 13.211 8.53846 13.8597L9.69231 14.5895C10.7179 15.2382 11.2308 15.5626 11.6154 15.3193C12 15.076 12 14.4273 12 13.1299V11.6703C12 10.3728 12 9.72411 11.6154 9.48084C11.2308 9.23757 10.7179 9.56193 9.69231 10.2107L8.53846 10.9405Z"
-                            fill="#212135" />
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 16L10 12L14 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </li>
             </ul>
         </div>
 
         <!-- description section -->
-        <div class=" w-full bg-white  dark/:bg-[color:var(--lb)]  flex justify-center mb-10 md:mb-0 ">
+        <div class=" w-full bg-white  dark:bg-gray-900  flex justify-center mb-10 md:mb-0 ">
             <div
-                class=" max-w-screen-2xl  flex-col  md:flex items-center justify-center  xl:px-5 w-full border-x-0 border-t-2 border-gray-100  ">
+                class=" max-w-screen-2xl  flex-col  md:flex items-center justify-center  xl:px-5 w-full border-x-0 border-t-2 border-gray-100 dark:border-gray-900 ">
                 <div class="  max-w-[90%l w-full flex flex-col items-center justify-evenly md:flex-row md:px-5 ">
                     <div class=" basis-1/3 md:basis-5/12  md:-mt-14  ">
                         <div class=" flex items-center py-7 px-5 ">
@@ -1219,7 +1282,7 @@
                             <span class=" w-4 mx-2  h-[2px] bg-rose-500 "></span>
                         </div>
                         <p
-                            class=" drop-shadow-sm px-5 text-gray-800 text-base md:text-lg lg:text-xl  max-w-xl 2xl:leading-loose ">
+                            class=" drop-shadow-sm px-5 text-gray-800 dark:text-slate-200 text-base md:text-lg lg:text-xl  max-w-xl 2xl:leading-loose ">
                             دیجی تایز عرضه کننده
                             جدیدترین محصولات الکترونیک نظیر لپ تاپ, گوشی هوشمند و ساعت هوشمند می باشد. دیجی تایز
                             افتخار این
@@ -1231,16 +1294,16 @@
                         <hr class=" md:hidden my-5  ">
                         <ul class=" flex flex-col justify-center items-center md:items-start lg:pr-20 2xl:pr-56 ">
                             <li
-                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 font-semibold text-xl text-gray-800 ">
+                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 font-semibold text-xl text-gray-800 dark:text-slate-50 ">
                                 محصولات</li>
                             <li
-                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 ">
+                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 dark:text-slate-300 ">
                                 تلفن همراه</li>
                             <li
-                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 ">
+                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 dark:text-slate-300 ">
                                 لپ تاپ</li>
                             <li
-                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 ">
+                                class=" cursor-pointer py-3 hover:underline transition-all duration-500 text-base text-gray-700 dark:text-slate-300 ">
                                 ساعت هوشمند</li>
                         </ul>
                         <hr class=" md:hidden my-3 ">
@@ -1253,8 +1316,9 @@
                         </iframe>
                         <div class="  ">
                             <div
-                                class=" px-2 flex items-center justify-between py-3 bg-stone-50/ border-[0.5px] my-2 w-52 cursor-pointer  hover:bg-stone-100 rounded-xl hover:scale-105 transition-all duration-300 ">
-                                <p class=" text-gray-800 text-base xl:text-lg "><a href="tel:+9821123456">۰۲۱-۱۲۳۴۵۶</a>
+                                class=" px-2 flex items-center justify-between py-3 bg-stone-50/ border-[0.5px] my-2 w-52 cursor-pointer  hover:bg-stone-100 dark:hover:bg-gray-700 rounded-xl hover:scale-105 transition-all duration-300 ">
+                                <p class=" text-gray-800 dark:text-gray-100 text-base xl:text-lg "><a
+                                        href="tel:+9821123456">۰۲۱-۱۲۳۴۵۶</a>
                                 </p>
                                 <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1262,8 +1326,8 @@
                                         fill="#FF755C" /></svg>
                             </div>
                             <div
-                                class=" px-2 flex items-center justify-between py-3 bg-stone-50/ border-[0.5px] my-2  w-52 cursor-pointer mt-1 hover:bg-stone-100 rounded-xl hover:scale-105 transition-all duration-300 ">
-                                <p class=" text-gray-800 text-base xl:text-lg "><a
+                                class=" px-2 flex items-center justify-between py-3 bg-stone-50/ border-[0.5px] my-2  w-52 cursor-pointer mt-1 hover:bg-stone-100 dark:hover:bg-gray-700 rounded-xl hover:scale-105 transition-all duration-300 ">
+                                <p class=" text-gray-800 dark:text-gray-100 text-base xl:text-lg "><a
                                         href="mailto:info@digitize.com">info@digitize.com</a></p>
                                 <svg width="24" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1278,7 +1342,46 @@
             </div>
         </div>
 
-        <script src="//unpkg.com/alpinejs" defer></script>
+
+
+        <!-- theme switch menu -->
+        <div x-data="{ isOpen: false }" id="xData"
+            class="left-0 top-1/2 fixed  w-11 h-16 bg-zinc-500 rounded-r-2xl flex items-center justify-center ">
+            <div @click="isOpen = !isOpen" class=" flex items-center justify-center ">
+                <!-- light icon -->
+                <svg id="lightBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+                <!-- dark icon -->
+                <svg id="darkBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class=" stroke-slate-50 w-7 h-7 cursor-pointer  ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+
+            </div>
+            <button tabindex="-1" x-show="isOpen" @click="isOpen = false"
+                class="inset-0 fixed bg-transparent opacity-70"></button>
+            <div id="menu-list" x-show="isOpen"
+                class="bg-white w-32 mt-4 rounded-r-lg overflow-hidden border border-gray-200 absolute left-0">
+                <a @click="isOpen = !isOpen" data-theme="light" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">light</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="dark" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">dark</a>
+                <hr>
+                <a @click="isOpen = !isOpen" data-theme="system" href="#"
+                    class=" theme-switcher flex items-center justify-evenly text-gray-700 md:px-8 text-[16px] font-medium  md:py-3 hover:bg-gray-200/80 px-6 py-2 ">system</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/src/js/theme.js"></script>
     </div>
 </body>
 
