@@ -18,7 +18,7 @@
         <div> <img class=" sm:w-19 " src="/assets/icons/digitize.png" alt="digitize"> </div>
         <div class=" text-xl  font-bold text-zinc-700 drop-shadow-lg sm:text-2xl ">دسته‌بندی</div>
         <div class=" w-9 h-9 sm:h-11 sm:w-11 bg-white shadow-sm flex items-center justify-center rounded-[10px] ">
-            <a href="shoppingCart.html" class=" outline-none decoration-transparent ">
+            <a data-link href="/shoppingCart" class=" outline-none decoration-transparent ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7 stroke-slate-700 ">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -36,8 +36,8 @@
       class=" flex items-center  justify-between sx:justify-around text-gray-400 ">
       <li @click="activeBottomTab = 1 " :class="activeBottomTab === 1  ?  activeBottomClass :  '  '   "
           class="  flex items-center justify-center ">
-          <a href="index.html"
-              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+          <a data-link href="/shoppingCart"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " >
               <div><svg class="  " width="32" height="32" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -49,8 +49,8 @@
           </a></li>
       <li @click="activeBottomTab = 2 " :class="activeBottomTab === 2 ?  activeBottomClass :  '  '   "
           class="  flex items-center justify-center ">
-          <a href="category.html"
-              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+          <a data-link href="/category"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " >
               <div><svg class="  " width="34" height="34" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
                       <g>
@@ -64,8 +64,8 @@
           </a></li>
       <li @click="activeBottomTab = 3 " :class="activeBottomTab === 3  ?  activeBottomClass :  '  '   "
           class="  flex items-center justify-center ">
-          <a href="shoppingCart.html"
-              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+          <a data-link href="/shoppingCart"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " >
               <div><svg class="  " width="34" height="34" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -77,8 +77,8 @@
           </a></li>
       <li @click="activeBottomTab = 4 " :class="activeBottomTab === 4  ?  activeBottomClass :  '  '   "
           class="  flex items-center justify-center ">
-          <a href="login.html"
-              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " href="#">
+          <a data-link href="/login"
+              class=" flex items-center justify-around w-full gap-x-2 sx:gap-x-3 py-1.5  sx:py-2 " >
               <div>
                   <svg class="  " width="22" height="24" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
@@ -100,12 +100,12 @@
             <div class=" bg-red-800/ container mx-auto flex items-center justify-between max-w-screen-2xl  ">
                 <ul class=" flex items-center justify-around md:basis-7/12 lg:basis-6/12 xl:max-w-2xl 2xl:max-w-2xl ">
                     <li>
-                        <a href="index.html"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/Logo.svg"
+                        <a data-link href="/"><img class=" md:w-24 xl:w-28 m-0 " src="/assets/images/logo/Logo.svg"
                                 alt="LOGO"></a>
                     </li>
                     <li
                         class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
-                        <a href="category.html">دسته بندی </a></li>
+                        <a data-link href="/category">دسته بندی </a></li>
                     <li
                         class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                         <a href="#">لپ تاپ</a></li>
@@ -113,7 +113,7 @@
                         class=" text-slate-800 dark:text-white transition-all duration-300  cursor-pointer md:font-semibold md:text-[16px] xl:text-[20px] ">
                         <a href="#">ساعت هوشمند</a></li>
                 </ul>
-                <div
+                <div id="search"
                     class="  bg-gray-200/80 dark:bg-gray-700 dark:text-slate-100 md:basis-[24%] lg:basis-4/12 xl:basis-4/12 flex  items-center md:px-1 md:py-2 xl:px-2 xl:py-3 rounded-xl  lg:max-w-lg xl:max-w-xl 2xl:max-w-xl  ">
                     <!-- search svg -->
                     <svg width="28" height="28" class=" mx-2 stroke-slate-800 " fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@
                 </div>
                 <div class="  ml-4 lg:ml-6 xl:ml-12 md:w-24 lg:w-28 xl:w-32  flex items-center justify-evenly bg-slate-400/   ">
                     <!-- shopping cart link -->
-                    <a href="shoppingCart.html" class="   outline-none decoration-transparent  ">
+                    <a data-link href="/shoppingCart" class="   outline-none decoration-transparent  ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
                             stroke="currentColor" class="md:w-7 md:h-7 lg:w-8 lg:h-8  stroke-slate-800  dark:stroke-slate-50 ">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -133,7 +133,7 @@
                         </svg>
                     </a>
                     <!-- login link -->
-                    <a href="login.html" class="  outline-none decoration-transparent ">
+                    <a data-link href="/login" class="  outline-none decoration-transparent ">
                         <svg class="md:w-6 md:h-6 lg:w-7 lg:h-7 stroke-slate-800  dark:stroke-slate-50 dark:text-white " viewBox="0 0 22 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -162,7 +162,7 @@
                     <!-- asus -->
                     <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/category/asus.png" alt="">
                     <!-- link to home -->
-                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="index.html">مشاهده همه</a>
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 "data-link href="/">مشاهده همه</a>
                 </div>
             </div>
             <!-- laptop section -->
@@ -178,7 +178,7 @@
                     <!-- Xiaomi -->
                     <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/category/xiaomi.png" alt="">
                     <!-- link to home -->
-                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="index.html">مشاهده همه</a>
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 "data-link href="/">مشاهده همه</a>
                 </div>
             </div>
             <!-- smart watch section -->
@@ -194,7 +194,7 @@
                     <!-- asus -->
                     <img class=" w-28 h-36 md:w-32 md:h-40 " src="/assets/images/category/asus.png" alt="">
                     <!-- link to home -->
-                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 " href="index.html">مشاهده همه</a>
+                    <a class=" absolute left-0 top-0 hover:underline text-orange-500 "data-link href="/">مشاهده همه</a>
                 </div>
             </div>
         </div>
@@ -237,7 +237,7 @@
     </div>
 
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="/src/js/theme.js"></script>
+    <script src="/src/js/app.js" type="module"  ></script>
 </body>
 
 </html>
