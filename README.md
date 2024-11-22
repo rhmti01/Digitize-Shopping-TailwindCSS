@@ -33,6 +33,12 @@ Welcome to **Digitize Shopping**, a modern frontend powered by **TailwindCSS**! 
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live demo [here](https://digitze-shopping-tailwind-rhmti01.netlify.app/)!
+
+---
+
 ## 🎯 Getting Started
 
 Follow these steps to set up and explore the project:
@@ -55,6 +61,19 @@ Follow these steps to set up and explore the project:
 5. **Open your browser:** <br/>
    visit your localhost to see the magic happen!
    
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to check the [issues page](https://github.com/rhmti01/Digitize-Shopping-TailwindCSS/issues).  
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request.
+
 ---
 
 ## ❤️ Acknowledgments
